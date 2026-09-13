@@ -86,12 +86,11 @@ pnpm db:seed
 | Environment Variable | Value | Description |
 | :--- | :--- | :--- |
 | `NODE_ENV` | `production` | Production mode |
-| `PORT` | `4000` | API port |
-| `DATABASE_URL` | `postgres://postgres.[REF]:[PASS]@...:6543/postgres?pgbouncer=true` | Supabase pooler URL |
-| `DIRECT_URL` | `postgres://postgres.[REF]:[PASS]@...:5432/postgres` | Supabase direct URL |
-| `JWT_ACCESS_SECRET` | `generate-random-32-chars-secret-key-here-2026` | Access token key |
-| `JWT_REFRESH_SECRET` | `generate-random-32-chars-refresh-key-here-2026` | Refresh token key |
-| `CORS_ORIGIN` | `https://*.vercel.app` *(or your Vercel URL)* | Allowed frontend origin |
+| `DATABASE_URL` | `postgresql://postgres.qwykkylfvvpqrbwbptol:Himanshu2003%40@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true` | Supabase Transaction Pooler URL |
+| `DIRECT_URL` | `postgresql://postgres.qwykkylfvvpqrbwbptol:Himanshu2003%40@aws-0-ap-south-1.pooler.supabase.com:5432/postgres` | Supabase Direct Session URL |
+| `JWT_ACCESS_SECRET` | `cdsprep_super_secret_access_jwt_key_at_least_32_chars_2026` | Access token secret (>= 32 chars) |
+| `JWT_REFRESH_SECRET` | `cdsprep_super_secret_refresh_jwt_key_at_least_32_chars_2026` | Refresh token secret (>= 32 chars) |
+| `CORS_ORIGIN` | `https://*.vercel.app` | Allowed frontend origin (supports wildcards) |
 | `STORAGE_PROVIDER` | `local` | Upload storage provider |
 | `AI_PROVIDER` | `mock` | AI assistant fallback |
 

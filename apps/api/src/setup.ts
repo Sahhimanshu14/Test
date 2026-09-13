@@ -60,18 +60,20 @@ export function configureApp(app: INestApplication): void {
         callback(null, true);
         return;
       }
-      if (isProduction) {
-        if (allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          callback(new Error(`CORS blocked for unauthorized origin: ${origin}`));
+
+      const isAllowed = allowedOrigins.some((allowed) => {
+        if (allowed === '*' || allowed === origin) return true;
+        if (allowed.includes('*')) {
+          const regexStr = '^' + allowed.replace(/\./g, '\\.').replace(/\*/g, '.*') + '$';
+          return new RegExp(regexStr).test(origin);
         }
+        return false;
+      });
+
+      if (isAllowed) {
+        callback(null, true);
       } else {
-        if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
-          callback(null, true);
-        } else {
-          callback(new Error(`CORS blocked for unauthorized origin: ${origin}`));
-        }
+        callback(null, false);
       }
     },
     credentials: true,
