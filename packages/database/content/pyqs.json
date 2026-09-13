@@ -1,0 +1,208 @@
+[
+  {
+    "paper": {
+      "year": 2024,
+      "session": "II",
+      "exam": "CDS",
+      "subjectSlug": "english",
+      "title": "UPSC CDS II (2024) — English Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "spotting-errors",
+        "topicSlug": "subject-verb-agreement",
+        "subtopicSlug": "proximity-rule",
+        "questionText": "Either the officer or his subordinates (A) / has failed to submit (B) / the preliminary reconnaissance report (C) / No error (D)",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "Either the officer or his subordinates", "isCorrect": false },
+          { "identifier": "B", "optionText": "has failed to submit", "isCorrect": true },
+          { "identifier": "C", "optionText": "the preliminary reconnaissance report", "isCorrect": false },
+          { "identifier": "D", "optionText": "No error", "isCorrect": false }
+        ],
+        "explanation": "When two subjects are joined by correlative conjunctions such as 'either... or' or 'neither... nor', the verb must agree in number with the subject closer to it (the proximity rule). Here, the plural noun 'his subordinates' is closest to the auxiliary verb, so 'has failed' must be replaced with 'have failed'.\n\nCorrect sentence: 'Either the officer or his subordinates have failed to submit the preliminary reconnaissance report.'",
+        "keyConcept": "Proximity rule in Subject-Verb Agreement with correlative conjunctions"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "vocabulary-usage",
+        "topicSlug": "synonyms-antonyms",
+        "subtopicSlug": "contextual-synonyms",
+        "questionText": "Select the word that is most nearly SIMILAR in meaning to the capitalized word in the sentence:\n\nThe commander exhibited exemplary TENACITY during the intense counter-insurgency operation.",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "Perseverance", "isCorrect": true },
+          { "identifier": "B", "optionText": "Hesitation", "isCorrect": false },
+          { "identifier": "C", "optionText": "Ambiguity", "isCorrect": false },
+          { "identifier": "D", "optionText": "Clemency", "isCorrect": false }
+        ],
+        "explanation": "'Tenacity' denotes the quality of determination, persistent firmness, and dogged endurance in the face of adversity. Its closest synonym among the given options is 'Perseverance'.\n- 'Hesitation': reluctance or indecision\n- 'Ambiguity': state of having multiple or unclear meanings\n- 'Clemency': leniency or mercy towards offenders",
+        "keyConcept": "Contextual synonyms in UPSC military and administrative vocabulary"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "sentence-arrangement",
+        "topicSlug": "ordering-of-words",
+        "subtopicSlug": "pqrs-syntactic-links",
+        "questionText": "Rearrange the jumbled parts to form a grammatically coherent sentence:\n\n(P) for sustainable regional stability\n(Q) multilateral maritime coordination\n(R) remains paramount in the Indo-Pacific\n(S) across key maritime choke points",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "Q - R - P - S", "isCorrect": false },
+          { "identifier": "B", "optionText": "Q - S - R - P", "isCorrect": true },
+          { "identifier": "C", "optionText": "P - Q - S - R", "isCorrect": false },
+          { "identifier": "D", "optionText": "R - P - Q - S", "isCorrect": false }
+        ],
+        "explanation": "Syntactic analysis:\n- Subject: (Q) 'multilateral maritime coordination'\n- Adverbial modifier: (S) 'across key maritime choke points'\n- Predicate verb: (R) 'remains paramount in the Indo-Pacific'\n- Purpose complement: (P) 'for sustainable regional stability'\n\nFull coherent sequence: 'Multilateral maritime coordination across key maritime choke points remains paramount in the Indo-Pacific for sustainable regional stability' -> Q-S-R-P.",
+        "keyConcept": "Syntactic sequencing and prepositional modifier placement in English sentences"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2024,
+      "session": "II",
+      "exam": "CDS",
+      "subjectSlug": "gk",
+      "title": "UPSC CDS II (2024) — General Knowledge Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "indian-polity",
+        "topicSlug": "preamble-fundamental-rights",
+        "subtopicSlug": "writs-jurisdiction",
+        "questionText": "Consider the following statements regarding the writ of 'Quo-Warranto' in Indian Constitutional Law:\n1. It is issued by the High Court or Supreme Court to prevent illegal usurpation of a public office.\n2. It can be sought only by an aggrieved person who has suffered personal injury.\n\nWhich of the statements given above is/are correct?",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "STATEMENT_BASED",
+        "options": [
+          { "identifier": "A", "optionText": "1 only", "isCorrect": true },
+          { "identifier": "B", "optionText": "2 only", "isCorrect": false },
+          { "identifier": "C", "optionText": "Both 1 and 2", "isCorrect": false },
+          { "identifier": "D", "optionText": "Neither 1 nor 2", "isCorrect": false }
+        ],
+        "explanation": "- Statement 1 is CORRECT: The writ of Quo-Warranto ('By what warrant or authority') is issued by the Supreme Court (Art. 32) or High Courts (Art. 226) to enquire into the legality of the claim of a person to a substantive public office of a permanent nature.\n- Statement 2 is INCORRECT: Unlike the other four writs, Quo-Warranto can be moved by ANY citizen, even if he or she is not personally aggrieved, because it affects the interest of the public at large.",
+        "keyConcept": "Locus standi exceptions in Article 32 writs (Quo-Warranto)"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "general-science-defence",
+        "topicSlug": "physics-mechanics-optics",
+        "subtopicSlug": "wave-optics-refraction",
+        "questionText": "Which one of the following optical phenomena is primarily responsible for the brilliant sparkle observed in a well-cut diamond?",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "Diffraction of light", "isCorrect": false },
+          { "identifier": "B", "optionText": "Total internal reflection of light", "isCorrect": true },
+          { "identifier": "C", "optionText": "Polarization of light", "isCorrect": false },
+          { "identifier": "D", "optionText": "Atmospheric scattering of light", "isCorrect": false }
+        ],
+        "explanation": "Diamond has a very high refractive index ($n \\approx 2.42$), which produces an unusually small critical angle:\n$$\\sin \\theta_c = \\frac{1}{n} = \\frac{1}{2.42} \\approx 0.4132 \\implies \\theta_c \\approx 24.4^\\circ$$\nBecause of the facets cut into the gemstone, light entering the diamond strikes interior boundaries at angles exceeding $24.4^\\circ$, undergoing multiple total internal reflections before exiting through the top face, producing intense sparkle.",
+        "keyConcept": "Total Internal Reflection and Critical Angle in optics"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "general-science-defence",
+        "topicSlug": "defence-missiles-commands",
+        "subtopicSlug": "missile-systems-drdo",
+        "questionText": "With reference to the Indian Armed Forces, the 'BrahMos' missile is classified as which one of the following?",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "Subsonic intercontinental ballistic missile", "isCorrect": false },
+          { "identifier": "B", "optionText": "Supersonic cruise missile", "isCorrect": true },
+          { "identifier": "C", "optionText": "Surface-to-air anti-ballistic missile", "isCorrect": false },
+          { "identifier": "D", "optionText": "Air-to-air beyond-visual-range missile", "isCorrect": false }
+        ],
+        "explanation": "BrahMos is a joint venture between India's DRDO and Russia's NPO Mashinostroyeniya. It is a two-stage supersonic cruise missile powered by a solid propellant booster and a liquid ramjet engine, travelling at speeds of Mach 2.8 to 3.0 across land, sea, and air platforms.",
+        "keyConcept": "BrahMos missile propulsion and velocity classification"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2024,
+      "session": "II",
+      "exam": "CDS",
+      "subjectSlug": "elementary-maths",
+      "title": "UPSC CDS II (2024) — Elementary Mathematics Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "trigonometry",
+        "topicSlug": "trigonometric-identities",
+        "subtopicSlug": "pythagorean-identities",
+        "questionText": "If $\\sec \\theta + \\tan \\theta = 3$, where $0^\\circ < \\theta < 90^\\circ$, then what is the value of $\\sin \\theta$?",
+        "difficulty": "MEDIUM",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "$\\frac{4}{5}$", "isCorrect": true },
+          { "identifier": "B", "optionText": "$\\frac{3}{5}$", "isCorrect": false },
+          { "identifier": "C", "optionText": "$\\frac{1}{3}$", "isCorrect": false },
+          { "identifier": "D", "optionText": "$\\frac{2}{3}$", "isCorrect": false }
+        ],
+        "explanation": "Using the fundamental Pythagorean trigonometric identity:\n$$\\sec^2 \\theta - \\tan^2 \\theta = 1$$\n$$(\\sec \\theta + \\tan \\theta)(\\sec \\theta - \\tan \\theta) = 1$$\n\nGiven $\\sec \\theta + \\tan \\theta = 3$:\n$$\\sec \\theta - \\tan \\theta = \\frac{1}{3}$$\n\nAdding both equations:\n$$2 \\sec \\theta = 3 + \\frac{1}{3} = \\frac{10}{3} \\implies \\sec \\theta = \\frac{5}{3} \\implies \\cos \\theta = \\frac{3}{5}$$\n\nSubtracting the equations:\n$$2 \\tan \\theta = 3 - \\frac{1}{3} = \\frac{8}{3} \\implies \\tan \\theta = \\frac{4}{3}$$\n\nNow, compute $\\sin \\theta$:\n$$\\sin \\theta = \\tan \\theta \\times \\cos \\theta = \\frac{4}{3} \\times \\frac{3}{5} = \\frac{4}{5}$$\n\nThus, $\\sin \\theta = \\frac{4}{5}$.",
+        "keyConcept": "Trigonometric reciprocal relation between $(\\sec\\theta + \\tan\\theta)$ and $(\\sec\\theta - \\tan\\theta)$"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "arithmetic",
+        "topicSlug": "number-systems-divisibility",
+        "subtopicSlug": "unit-digits-cyclicity",
+        "questionText": "What is the unit digit in the expansion of $3^{65} \\times 6^{59} \\times 7^{71}$?",
+        "difficulty": "MEDIUM",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          { "identifier": "A", "optionText": "$2$", "isCorrect": false },
+          { "identifier": "B", "optionText": "$4$", "isCorrect": true },
+          { "identifier": "C", "optionText": "$6$", "isCorrect": false },
+          { "identifier": "D", "optionText": "$8$", "isCorrect": false }
+        ],
+        "explanation": "We determine the unit digit of each factor using power cyclicity modulo 10:\n\n1. **For $3^{65}$**: Powers of 3 have a cyclicity of 4 ($3^1=3, 3^2=9, 3^3=7, 3^4=1$).\n   $$65 = 4 \\times 16 + 1 \\implies 3^{65} \\equiv 3^1 \\equiv 3 \\pmod{10}$$\n\n2. **For $6^{59}$**: Any positive integral power of 6 always ends in 6.\n   $$6^{59} \\equiv 6 \\pmod{10}$$\n\n3. **For $7^{71}$**: Powers of 7 have a cyclicity of 4 ($7^1=7, 7^2=9, 7^3=3, 7^4=1$).\n   $$71 = 4 \\times 17 + 3 \\implies 7^{71} \\equiv 7^3 \\equiv 3 \\pmod{10}$$\n\nMultiply the unit digits:\n$$\\text{Unit digit} = (3 \\times 6 \\times 3) \\pmod{10} = 54 \\pmod{10} = 4$$",
+        "keyConcept": "Power cyclicity and modular arithmetic modulo 10"
+      }
+    ]
+  }
+]

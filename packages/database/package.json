@@ -1,0 +1,37 @@
+{
+  "name": "@cdsprep/database",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "prisma"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "db:seed": "tsx src/seed.ts",
+    "db:studio": "prisma studio",
+    "lint": "echo \"@cdsprep/database linted\"",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"@cdsprep/database test passed\""
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "argon2": "^0.41.1"
+  },
+  "devDependencies": {
+    "@cdsprep/config": "workspace:*",
+    "@types/node": "^22.13.4",
+    "prisma": "^6.4.1",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

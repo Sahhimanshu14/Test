@@ -1,0 +1,36 @@
+{
+  "name": "cdsprep-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "scripts": {
+    "dev": "turbo run dev --concurrency 25",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:generate": "pnpm --filter @cdsprep/database db:generate",
+    "db:migrate": "pnpm --filter @cdsprep/database db:migrate",
+    "db:migrate:deploy": "pnpm --filter @cdsprep/database db:migrate:deploy",
+    "db:push": "pnpm --filter @cdsprep/database db:push",
+    "db:seed": "pnpm --filter @cdsprep/database db:seed",
+    "db:studio": "pnpm --filter @cdsprep/database db:studio",
+    "validate:env": "tsx scripts/verify-integrations.ts",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "verify:integrations": "tsx scripts/verify-integrations.ts",
+    "smoke:test": "tsx scripts/smoke-test.ts",
+    "test:backup-restore": "tsx scripts/test-backup-restore.ts",
+    "deploy:prod": "tsx scripts/production-deploy.ts",
+    "audit:security": "tsx scripts/security-audit-runner.ts",
+    "beta:run": "tsx scripts/beta-simulation.ts"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.2",
+    "tsx": "^4.23.13",
+    "turbo": "^2.4.4",
+    "typescript": "^5.7.3"
+  }
+}

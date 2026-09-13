@@ -1,0 +1,17 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  'prisma': true
+  'esbuild': true
+  'msgpackr-extract': true
+  'sharp': true
+  'unrs-resolver': true
+  'argon2': true
+  '@scarf/scarf': false
+
+overrides:
+  multer: '2.3.0'

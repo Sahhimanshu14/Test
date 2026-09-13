@@ -1,0 +1,235 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '22'
+  PNPM_VERSION: '12.3.4'
+  TURBO_TELEMETRY_DISABLED: '1'
+
+jobs:
+  # 1. Dependency Integrity & Security Audit
+  security-audit:
+    name: Security Audit & Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Verify Frozen Lockfile Installation
+        run: pnpm install --frozen-lockfile
+
+      - name: Execute Security Vulnerability Audit
+        run: pnpm audit --audit-level=high
+
+  # 2. Static Code Analysis: Linting & TypeScript Typechecking
+  lint-and-typecheck:
+    name: Lint & Typecheck
+    runs-on: ubuntu-latest
+    needs: [security-audit]
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma ORM Client
+        run: pnpm db:generate
+
+      - name: Run ESLint Code Quality Verification
+        run: pnpm lint
+
+      - name: Run TypeScript Strict Type Checking
+        run: pnpm typecheck
+
+      - name: Run Prettier Formatting Verification
+        run: pnpm format:check
+
+  # 3. Unit & Integration Test Suites
+  test:
+    name: Unit & Integration Tests
+    runs-on: ubuntu-latest
+    needs: [security-audit]
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: cdsprep_test
+          POSTGRES_USER: cdsprep_test
+          POSTGRES_PASSWORD: test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: 'postgresql://cdsprep_test:test_password@localhost:5432/cdsprep_test?schema=public'
+      REDIS_URL: 'redis://localhost:6379'
+      JWT_SECRET: 'test-access-secret-32-chars-long-security-token'
+      JWT_REFRESH_SECRET: 'test-refresh-secret-32-chars-long-refresh-token'
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma ORM Client
+        run: pnpm db:generate
+
+      - name: Run Full Monorepo Test Suites
+        run: pnpm test
+
+  # 4. End-to-End Test Workflow
+  e2e:
+    name: End-to-End Journey Tests
+    runs-on: ubuntu-latest
+    needs: [test]
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: cdsprep_e2e
+          POSTGRES_USER: cdsprep_e2e
+          POSTGRES_PASSWORD: e2e_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: 'postgresql://cdsprep_e2e:e2e_password@localhost:5432/cdsprep_e2e?schema=public'
+      REDIS_URL: 'redis://localhost:6379'
+      JWT_SECRET: 'e2e-access-secret-32-chars-long-security-token'
+      JWT_REFRESH_SECRET: 'e2e-refresh-secret-32-chars-long-refresh-token'
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma ORM Client
+        run: pnpm db:generate
+
+      - name: Execute End-to-End Test Suite
+        run: pnpm test:e2e
+
+  # 5. Production Compilation & Build Verification
+  build:
+    name: Production Build Verification
+    runs-on: ubuntu-latest
+    needs: [lint-and-typecheck, test]
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma ORM Client
+        run: pnpm db:generate
+
+      - name: Compile Monorepo Packages & Applications
+        run: pnpm build
+
+  # 6. CI Gating Checkpoint
+  ci-success:
+    name: CI Checks Completed
+    runs-on: ubuntu-latest
+    needs: [security-audit, lint-and-typecheck, test, e2e, build]
+    steps:
+      - name: Confirm Gating Success
+        run: echo "✅ All CI quality gates, tests, security audits, and production builds passed successfully!"

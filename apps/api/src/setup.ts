@@ -1,0 +1,121 @@
+import { INestApplication } from '@nestjs/common';
+import helmet from 'helmet';
+import cookieParser from 'cookie-parser';
+import { json, urlencoded } from 'express';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
+/**
+ * Shared configuration pipeline for NestJS HTTP application instance.
+ * Applies security headers, request body parsers, cookie parsing,
+ * strict CORS origins, global route prefixing, and OpenAPI / Swagger documentation.
+ */
+export function configureApp(app: INestApplication): void {
+  // 1. Strict Request Body Size Limits (Mitigate DoS & Buffer Exhaustion)
+  app.use(json({ limit: '1mb' }));
+  app.use(urlencoded({ extended: true, limit: '1mb' }));
+
+  // 2. Comprehensive Security Headers via Helmet
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'", "'unsafe-inline'"],
+          styleSrc: ["'self'", "'unsafe-inline'"],
+          imgSrc: ["'self'", 'data:', 'blob:', 'https:'],
+          connectSrc: ["'self'", process.env.CORS_ORIGIN || 'http://localhost:3000'],
+          fontSrc: ["'self'", 'https:', 'data:'],
+          objectSrc: ["'none'"],
+        },
+      },
+      crossOriginEmbedderPolicy: false,
+      hsts: {
+        maxAge: 31536000,
+        includeSubDomains: true,
+        preload: true,
+      },
+      frameguard: { action: 'deny' },
+      noSniff: true,
+      referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
+    }),
+  );
+  const cookieMiddleware = typeof cookieParser === 'function' ? cookieParser : (cookieParser as any)?.default || require('cookie-parser');
+  app.use(cookieMiddleware());
+
+  // 3. Strict CORS Configuration (Support comma-separated origins, no wildcard credential leak)
+  const isProduction = process.env.NODE_ENV === 'production';
+  const rawCorsOrigins = process.env.CORS_ORIGIN || 'http://localhost:3000';
+  const allowedOrigins = rawCorsOrigins.split(',').map((o) => o.trim());
+
+  if (isProduction && allowedOrigins.includes('*')) {
+    throw new Error('Security policy violation: Wildcard CORS origin is prohibited in production.');
+  }
+
+  app.enableCors({
+    origin: (
+      origin: string | undefined,
+      callback: (err: Error | null, allow?: boolean) => void,
+    ) => {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+      if (isProduction) {
+        if (allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error(`CORS blocked for unauthorized origin: ${origin}`));
+        }
+      } else {
+        if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
+          callback(null, true);
+        } else {
+          callback(new Error(`CORS blocked for unauthorized origin: ${origin}`));
+        }
+      }
+    },
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-request-id'],
+    maxAge: 86400,
+  });
+
+  // 4. API Versioning Prefix (exclude direct health/readiness probe routes)
+  app.setGlobalPrefix('api/v1', {
+    exclude: [
+      'health',
+      'health/(.*)',
+      'api/health',
+      'api/ready',
+      'api/liveness',
+      'api/v1/health',
+      'api/v1/health/(.*)',
+      'api/v1/ready',
+      'api/v1/liveness',
+      'ready',
+    ],
+  });
+
+  // 5. OpenAPI / Swagger Documentation
+  const swaggerConfig = new DocumentBuilder()
+    .setTitle('CDSPrep REST API')
+    .setDescription(
+      'Comprehensive REST API specifications for the CDSPrep examination platform, covering test attempts, question banks, PYQ archives, analytics, AI assistance, and administrative management.',
+    )
+    .setVersion('1.0.0')
+    .addBearerAuth(
+      {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+        name: 'JWT',
+        description: 'Enter JWT access token',
+        in: 'header',
+      },
+      'JWT-auth',
+    )
+    .build();
+
+  const document = SwaggerModule.createDocument(app, swaggerConfig);
+  SwaggerModule.setup('api/docs', app, document);
+}

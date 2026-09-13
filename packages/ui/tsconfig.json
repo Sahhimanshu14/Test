@@ -1,0 +1,10 @@
+{
+  "extends": "@cdsprep/config/tsconfig.react.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "jsx": "react-jsx",
+    "incremental": false
+  },
+  "include": ["src/**/*"]
+}

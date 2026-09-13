@@ -1,0 +1,49 @@
+# =========================================================
+# Stage 1: Build & Package Worker Dependencies
+# =========================================================
+FROM node:22-alpine AS builder
+
+RUN apk add --no-cache libc6-compat python3 make g++
+WORKDIR /app
+
+RUN npm install -g pnpm@12.3.4
+
+# Copy monorepo configuration and package manifests
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json ./
+COPY packages/ ./packages/
+COPY apps/worker/ ./apps/worker/
+
+# Install dependencies and build Prisma client + Worker bundle
+RUN pnpm install --frozen-lockfile
+RUN pnpm --filter @cdsprep/database run db:generate
+RUN pnpm --filter @cdsprep/worker run build
+RUN pnpm prune --prod
+
+# =========================================================
+# Stage 2: Minimal Production Worker Runtime
+# =========================================================
+FROM node:22-alpine AS runner
+
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+# Create non-root unprivileged worker user
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 worker
+
+# Copy runtime manifests, compiled modules, and artifacts
+COPY --chown=worker:nodejs package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY --chown=worker:nodejs --from=builder /app/node_modules ./node_modules
+COPY --chown=worker:nodejs --from=builder /app/packages ./packages
+COPY --chown=worker:nodejs --from=builder /app/apps/worker/dist ./apps/worker/dist
+COPY --chown=worker:nodejs --from=builder /app/apps/worker/package.json ./apps/worker/package.json
+
+USER worker
+
+# Process-level health check: verifies worker Node.js process is active
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD pgrep -f "node apps/worker/dist/main.js" || exit 1
+
+CMD ["node", "apps/worker/dist/main.js"]

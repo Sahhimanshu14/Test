@@ -1,0 +1,392 @@
+[
+  {
+    "slug": "english",
+    "name": "English",
+    "description": "UPSC CDS English syllabus: Spotting of Errors, Sentence Improvement, Reading Comprehension, Synonyms & Antonyms, Idioms & Phrases, Ordering of Words and Sentences, Fill in the blanks, and Cloze Composition.",
+    "icon": "BookOpen",
+    "orderIndex": 1,
+    "chapters": [
+      {
+        "slug": "spotting-errors",
+        "name": "Spotting Errors",
+        "orderIndex": 1,
+        "topics": [
+          {
+            "slug": "subject-verb-agreement",
+            "name": "Subject-Verb Agreement",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "proximity-rule", "name": "Rule of Proximity with Correlatives", "orderIndex": 1 },
+              { "slug": "collective-nouns", "name": "Collective Nouns and Quantification", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "tenses-and-conditionals",
+            "name": "Tenses & Conditionals",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "past-perfect-sequence", "name": "Sequence of Tenses & Past Perfect", "orderIndex": 1 },
+              { "slug": "hypothetical-conditionals", "name": "Hypothetical & Unreal Conditionals", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "prepositions-and-phrasal-verbs",
+            "name": "Prepositions & Phrasal Verbs",
+            "orderIndex": 3,
+            "subtopics": [
+              { "slug": "fixed-prepositions", "name": "Fixed Prepositions", "orderIndex": 1 },
+              { "slug": "idiomatic-phrasals", "name": "Common Phrasal Verbs", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "vocabulary-usage",
+        "name": "Vocabulary & Usage",
+        "orderIndex": 2,
+        "topics": [
+          {
+            "slug": "synonyms-antonyms",
+            "name": "Synonyms & Antonyms",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "contextual-synonyms", "name": "Contextual Nuances in Synonyms", "orderIndex": 1 },
+              { "slug": "tonal-antonyms", "name": "Antonyms in Argumentative Passages", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "idioms-phrases",
+            "name": "Idioms & Phrases",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "military-action-idioms", "name": "Military & Action-Oriented Idioms", "orderIndex": 1 },
+              { "slug": "classical-idioms", "name": "Classical English Metaphors", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "reading-comprehension",
+        "name": "Reading Comprehension",
+        "orderIndex": 3,
+        "topics": [
+          {
+            "slug": "passage-inference",
+            "name": "Passage Inference & Central Theme",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "main-idea", "name": "Identifying the Primary Purpose", "orderIndex": 1 },
+              { "slug": "author-tone", "name": "Evaluating the Tone and Attitude", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "sentence-arrangement",
+        "name": "Sentence Arrangement & Jumbles",
+        "orderIndex": 4,
+        "topics": [
+          {
+            "slug": "ordering-of-words",
+            "name": "Ordering of Words in a Sentence",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "pqrs-syntactic-links", "name": "Syntactic Linking in PQRS", "orderIndex": 1 }
+            ]
+          },
+          {
+            "slug": "ordering-of-sentences",
+            "name": "Ordering of Sentences in a Paragraph",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "s1-s6-chronology", "name": "Chronological Transitions in S1-S6", "orderIndex": 1 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "gk",
+    "name": "General Knowledge",
+    "description": "UPSC CDS General Knowledge syllabus: Indian Polity, Indian History, Geography, General Science (Physics, Chemistry, Biology), Economy, Defence Forces, and Current Affairs.",
+    "icon": "Globe",
+    "orderIndex": 2,
+    "chapters": [
+      {
+        "slug": "indian-polity",
+        "name": "Indian Polity & Constitution",
+        "orderIndex": 1,
+        "topics": [
+          {
+            "slug": "preamble-fundamental-rights",
+            "name": "Preamble & Fundamental Rights",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "writs-jurisdiction", "name": "Writs Jurisdiction (Article 32 & 226)", "orderIndex": 1 },
+              { "slug": "equality-freedom", "name": "Right to Equality & Freedom Provisions", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "parliament-union-executive",
+            "name": "Parliament & Union Executive",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "president-powers", "name": "Presidential Powers & Ordinances", "orderIndex": 1 },
+              { "slug": "parliamentary-bills", "name": "Money Bills vs Ordinary Legislative Process", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "judiciary-constitutional-bodies",
+            "name": "Judiciary & Constitutional Bodies",
+            "orderIndex": 3,
+            "subtopics": [
+              { "slug": "supreme-court-jurisdiction", "name": "Supreme Court Powers & Judicial Review", "orderIndex": 1 },
+              { "slug": "election-commission", "name": "Election Commission & UPSC Autonomy", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "indian-history",
+        "name": "Indian History & Freedom Struggle",
+        "orderIndex": 2,
+        "topics": [
+          {
+            "slug": "ancient-medieval-india",
+            "name": "Ancient & Medieval India",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "indus-vedic-period", "name": "Harappan Civilization & Vedic Society", "orderIndex": 1 },
+              { "slug": "maurya-gupta-empires", "name": "Mauryan Administration & Gupta Golden Era", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "modern-india-freedom-movement",
+            "name": "Modern India & National Movement",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "revolt-1857", "name": "Revolt of 1857 & Early Resistance", "orderIndex": 1 },
+              { "slug": "gandhian-movements", "name": "Non-Cooperation, Civil Disobedience & Quit India", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "geography",
+        "name": "Geography (Physical, Indian & World)",
+        "orderIndex": 3,
+        "topics": [
+          {
+            "slug": "physical-geography",
+            "name": "Physical Geography & Geomorphology",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "plate-tectonics", "name": "Plate Tectonics & Volcanism", "orderIndex": 1 },
+              { "slug": "climatology-cyclones", "name": "Atmospheric Circulation & Tropical Cyclones", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "indian-geography",
+            "name": "Indian Geography & Drainage Systems",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "himalayan-peninsular-rivers", "name": "Himalayan vs Peninsular River Systems", "orderIndex": 1 },
+              { "slug": "indian-monsoon-mechanism", "name": "South-West Monsoon Mechanism & El Niño", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "general-science-defence",
+        "name": "General Science & Defence",
+        "orderIndex": 4,
+        "topics": [
+          {
+            "slug": "physics-mechanics-optics",
+            "name": "Physics: Mechanics & Optics",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "newtons-laws-gravitation", "name": "Newtonian Dynamics & Universal Gravitation", "orderIndex": 1 },
+              { "slug": "wave-optics-refraction", "name": "Total Internal Reflection & Lenses", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "chemistry-matter-reactions",
+            "name": "Chemistry: Matter & Reactions",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "acids-bases-salts", "name": "pH Scale, Acids, Bases and Indicators", "orderIndex": 1 },
+              { "slug": "redox-electrochemistry", "name": "Oxidation States & Corrosion Prevention", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "biology-physiology-ecology",
+            "name": "Biology: Human Physiology & Cell Biology",
+            "orderIndex": 3,
+            "subtopics": [
+              { "slug": "cell-organelles", "name": "Cell Organelles & Mitosis/Meiosis", "orderIndex": 1 },
+              { "slug": "circulatory-endocrine", "name": "Circulatory & Endocrine System Hormones", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "defence-missiles-commands",
+            "name": "Defence Forces, Missiles & Commands",
+            "orderIndex": 4,
+            "subtopics": [
+              { "slug": "integrated-theatre-commands", "name": "Commands of Army, Navy and Air Force", "orderIndex": 1 },
+              { "slug": "missile-systems-drdo", "name": "Ballistic vs Cruise Missiles (Agni, BrahMos, Akash)", "orderIndex": 2 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "elementary-maths",
+    "name": "Elementary Mathematics",
+    "description": "UPSC CDS Elementary Mathematics syllabus: Arithmetic, Number Theory, Algebra, Trigonometry, Geometry, Mensuration, and Statistics.",
+    "icon": "Calculator",
+    "orderIndex": 3,
+    "chapters": [
+      {
+        "slug": "arithmetic",
+        "name": "Arithmetic & Number Theory",
+        "orderIndex": 1,
+        "topics": [
+          {
+            "slug": "number-systems-divisibility",
+            "name": "Number Systems & Divisibility",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "divisibility-remainder-theorem", "name": "Divisibility Rules & Remainder Theorems", "orderIndex": 1 },
+              { "slug": "unit-digits-cyclicity", "name": "Unit Digits & Power Cyclicity", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "time-speed-distance",
+            "name": "Time, Speed & Distance",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "trains-relative-speed", "name": "Relative Speed & Train Crossings", "orderIndex": 1 },
+              { "slug": "boats-streams", "name": "Upstream & Downstream River Flows", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "percentages-profit-loss",
+            "name": "Percentages & Profit-Loss",
+            "orderIndex": 3,
+            "subtopics": [
+              { "slug": "successive-discounts", "name": "Successive Percentages & Marked Price", "orderIndex": 1 },
+              { "slug": "simple-compound-interest", "name": "Annual & Half-Yearly Compound Interest", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "algebra",
+        "name": "Algebra & Polynomials",
+        "orderIndex": 2,
+        "topics": [
+          {
+            "slug": "algebraic-identities",
+            "name": "Basic Algebraic Identities & Factoring",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "cubic-identities", "name": "Symmetric Cubics and a^3+b^3+c^3-3abc", "orderIndex": 1 },
+              { "slug": "remainder-factor-theorem", "name": "Remainder Theorem & Polynomial Roots", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "quadratic-equations",
+            "name": "Linear & Quadratic Equations",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "nature-of-roots", "name": "Discriminant & Nature of Roots", "orderIndex": 1 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "trigonometry",
+        "name": "Trigonometry",
+        "orderIndex": 3,
+        "topics": [
+          {
+            "slug": "trigonometric-identities",
+            "name": "Trigonometric Identities & Values",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "pythagorean-identities", "name": "sin^2 x + cos^2 x = 1 & Allied Angles", "orderIndex": 1 },
+              { "slug": "complementary-angles", "name": "Complementary Angles & Standard Values", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "heights-and-distances",
+            "name": "Heights & Distances",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "angles-elevation-depression", "name": "Triangulation & Angles of Elevation/Depression", "orderIndex": 1 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "geometry",
+        "name": "Plane Geometry",
+        "orderIndex": 4,
+        "topics": [
+          {
+            "slug": "lines-angles-triangles",
+            "name": "Lines, Angles & Triangle Properties",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "congruence-similarity", "name": "Similarity Theorems & Thales Theorem", "orderIndex": 1 },
+              { "slug": "triangle-centres", "name": "Centroid, Incentre, Circumcentre, Orthocentre", "orderIndex": 2 }
+            ]
+          },
+          {
+            "slug": "circles-tangents",
+            "name": "Circles, Chords & Tangents",
+            "orderIndex": 2,
+            "subtopics": [
+              { "slug": "tangent-secant-theorems", "name": "Alternate Segment Theorem & Tangent Powers", "orderIndex": 1 },
+              { "slug": "cyclic-quadrilaterals", "name": "Properties of Cyclic Quadrilaterals", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mensuration",
+        "name": "Mensuration (2D & 3D)",
+        "orderIndex": 5,
+        "topics": [
+          {
+            "slug": "areas-and-volumes",
+            "name": "Surface Areas & Volumes",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "cylinders-cones-spheres", "name": "Frustum, Cones, Cylinders and Hemispheres", "orderIndex": 1 },
+              { "slug": "melting-recasting-solids", "name": "Conservation of Volume on Recasting", "orderIndex": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "statistics",
+        "name": "Statistics & Data Analysis",
+        "orderIndex": 6,
+        "topics": [
+          {
+            "slug": "central-tendency-dispersion",
+            "name": "Measures of Central Tendency",
+            "orderIndex": 1,
+            "subtopics": [
+              { "slug": "mean-median-mode-relation", "name": "Empirical Relation (Mode = 3 Median - 2 Mean)", "orderIndex": 1 }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
