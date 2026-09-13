@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "turbo run dev --concurrency 25",
     "build": "turbo run build",
+    "start": "node apps/api/dist/main.js",
+    "start:api": "node apps/api/dist/main.js",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
