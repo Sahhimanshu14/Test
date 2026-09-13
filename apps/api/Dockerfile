@@ -14,9 +14,23 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json ./
 COPY packages/ ./packages/
 COPY apps/api/ ./apps/api/
 
-# Install workspace dependencies and build Prisma client + API bundle
+# Install workspace dependencies and build all shared packages before API
 RUN pnpm install --frozen-lockfile
+
+# Generate Prisma client for database package
 RUN pnpm --filter @cdsprep/database run db:generate
+
+# Build all shared workspace packages in dependency order
+RUN pnpm --filter @cdsprep/types run build
+RUN pnpm --filter @cdsprep/validation run build
+RUN pnpm --filter @cdsprep/config run build
+RUN pnpm --filter @cdsprep/email run build
+RUN pnpm --filter @cdsprep/storage run build
+RUN pnpm --filter @cdsprep/payments run build
+RUN pnpm --filter @cdsprep/ai run build
+RUN pnpm --filter @cdsprep/database run build
+
+# Now build the API after all dependencies are compiled
 RUN pnpm --filter @cdsprep/api run build
 RUN pnpm prune --prod
 
@@ -50,3 +64,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
   CMD wget -qO- http://127.0.0.1:4000/api/health || exit 1
 
 CMD ["node", "apps/api/dist/main.js"]
+
