@@ -6,7 +6,6 @@
     "dev": "next dev -p 3000",
     "prebuild": "pnpm --filter @cdsprep/config build && pnpm --filter @cdsprep/types build && pnpm --filter @cdsprep/validation build && pnpm --filter @cdsprep/ui build",
     "build": "next build",
-    "postbuild": "node -e \"const fs=require('fs'); fs.mkdirSync('apps/web', {recursive:true}); try { fs.cpSync('.next', 'apps/web/.next', {recursive:true}); } catch(e){}\"",
     "start": "next start -H 0.0.0.0 -p ${PORT:-3000}",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
