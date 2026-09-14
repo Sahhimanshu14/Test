@@ -93,18 +93,18 @@ export function TestCard({
         </div>
 
         {/* Section Tags */}
-        {sections.length > 0 && (
+        {Array.isArray(sections) && sections.length > 0 && (
           <div className="space-y-1.5">
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
               Sections ({sections.length})
             </span>
             <div className="flex flex-wrap gap-1.5">
-              {sections.map((sec) => (
+              {sections.map((sec, sIdx) => (
                 <span
-                  key={sec.id}
+                  key={sec?.id || `sec_${sIdx}`}
                   className="rounded bg-slate-800/80 px-2 py-0.5 text-[10px] font-medium text-slate-300"
                 >
-                  {sec.name}
+                  {sec?.name || `Section ${sIdx + 1}`}
                 </span>
               ))}
             </div>

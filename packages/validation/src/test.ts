@@ -8,13 +8,13 @@ import {
 } from '@cdsprep/types';
 
 export const createAttemptSchema = z.object({
-  testId: z.string().uuid('Invalid test ID'),
+  testId: z.string().min(1, 'Invalid test ID'),
   sessionToken: z.string().optional(),
 });
 
 export const autosaveAnswerSchema = z.object({
-  questionId: z.string().uuid('Invalid question ID'),
-  selectedOptionId: z.string().uuid('Invalid option ID').nullable().optional(),
+  questionId: z.string().min(1, 'Invalid question ID'),
+  selectedOptionId: z.string().min(1, 'Invalid option ID').nullable().optional(),
   timeSpentSeconds: z.number().int().nonnegative().default(0),
   paletteState: z.nativeEnum(QuestionPaletteState).default(QuestionPaletteState.ANSWERED),
 });
@@ -42,9 +42,9 @@ export const createTestSchema = z.object({
   slug: z.string().min(3).max(200),
   description: z.string().optional().nullable(),
   testType: z.nativeEnum(TestType).default(TestType.FULL_MOCK),
-  subjectId: z.string().uuid().optional().nullable(),
-  chapterId: z.string().uuid().optional().nullable(),
-  topicId: z.string().uuid().optional().nullable(),
+  subjectId: z.string().min(1).optional().nullable(),
+  chapterId: z.string().min(1).optional().nullable(),
+  topicId: z.string().min(1).optional().nullable(),
   targetAcademy: z.nativeEnum(AcademyTarget).default(AcademyTarget.IMA),
   durationMinutes: z.number().int().min(1).max(360).default(120),
   totalMarks: z.number().positive().default(100),
@@ -66,7 +66,7 @@ export const createTestSectionSchema = z.object({
 });
 
 export const assignTestQuestionsSchema = z.object({
-  questionIds: z.array(z.string().uuid()).min(1),
+  questionIds: z.array(z.string().min(1)).min(1),
 });
 
 export type CreateAttemptInput = z.infer<typeof createAttemptSchema>;

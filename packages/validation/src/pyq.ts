@@ -15,7 +15,7 @@ export const CreatePYQPaperBaseSchema = z.object({
   session: z.string().min(1, 'Session is required (e.g. I, II)').max(10),
   exam: z.string().min(1).max(50).default('CDS'),
   subjectSlug: z.string().min(1, 'Subject slug is required').max(50),
-  subjectId: z.string().uuid('Invalid subject ID format').optional().nullable(),
+  subjectId: z.string().min(1, 'Invalid subject ID format').optional().nullable(),
   title: z.string().min(3, 'Title must be at least 3 characters long').max(150),
   totalMarks: z.coerce.number().positive('Total marks must be positive').default(100.0),
   durationMin: z.coerce.number().int().positive('Duration must be positive').default(120),
@@ -37,7 +37,7 @@ export const CreatePYQPaperSchema = CreatePYQPaperBaseSchema;
 export const UpdatePYQPaperSchema = CreatePYQPaperBaseSchema.partial();
 
 export const MapPYQQuestionItemSchema = z.object({
-  questionId: z.string().uuid('Invalid question ID format'),
+  questionId: z.string().min(1, 'Invalid question ID format'),
   questionNumber: z.number().int().positive('Question number must be positive'),
 });
 

@@ -752,26 +752,44 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
         item = store.tests.find((t: any) => t.id === 'test-backing-1') || store.tests.find((t: any) => t.id === 'test_cds_full_1') || store.tests[0];
       }
 
-      // Ensure test has sections and testQuestions attached
+      // Ensure test has sections and testQuestions attached as a proper Array
       if (item && (collectionName === 'tests' || (collectionName as string) === 'test')) {
-        if (!item.sections || item.sections.length === 0) {
-          const testQuestions = store.questions.map((q: any, idx: number) => ({
-            id: `tq_${item.id}_${idx}`,
-            testSectionId: `sec_${item.id}_1`,
-            questionId: q.id,
-            orderIndex: idx + 1,
-            question: q,
-          }));
+        if (!Array.isArray(item.sections) || item.sections.length === 0) {
+          const rawSec = (item.sections as any)?.create;
+          const secId = `sec_${item.id}_1`;
+          let secQuestions: any[] = [];
+          if (rawSec?.testQuestions?.create && Array.isArray(rawSec.testQuestions.create)) {
+            secQuestions = rawSec.testQuestions.create.map((tq: any, idx: number) => {
+              const q = store.questions.find((it: any) => it.id === tq.questionId) || store.questions[idx] || store.questions[0];
+              return {
+                id: `tq_${item.id}_${idx}`,
+                testSectionId: secId,
+                questionId: tq.questionId || q?.id || `q_${idx}`,
+                orderIndex: tq.orderIndex !== undefined ? tq.orderIndex : idx + 1,
+                question: q,
+              };
+            });
+          } else {
+            secQuestions = store.questions.slice(0, 10).map((q: any, idx: number) => ({
+              id: `tq_${item.id}_${idx}`,
+              testSectionId: secId,
+              questionId: q.id,
+              orderIndex: idx + 1,
+              question: q,
+            }));
+          }
+
           item = {
             ...item,
             sections: [
               {
-                id: `sec_${item.id}_1`,
-                name: 'Section 1',
-                durationMinutes: item.durationMinutes || 120,
+                id: secId,
+                testId: item.id,
+                name: rawSec?.name || 'Section 1',
+                durationMinutes: rawSec?.durationMinutes || item.durationMinutes || 120,
                 orderIndex: 1,
-                _count: { testQuestions: testQuestions.length },
-                testQuestions,
+                _count: { testQuestions: secQuestions.length },
+                testQuestions: secQuestions,
               },
             ],
           };
@@ -848,24 +866,42 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
       }
 
       if (item && (collectionName === 'tests' || (collectionName as string) === 'test')) {
-        if (!item.sections || item.sections.length === 0) {
-          const testQuestions = store.questions.map((q: any, idx: number) => ({
-            id: `tq_${item.id}_${idx}`,
-            testSectionId: `sec_${item.id}_1`,
-            questionId: q.id,
-            orderIndex: idx + 1,
-            question: q,
-          }));
+        if (!Array.isArray(item.sections) || item.sections.length === 0) {
+          const rawSec = (item.sections as any)?.create;
+          const secId = `sec_${item.id}_1`;
+          let secQuestions: any[] = [];
+          if (rawSec?.testQuestions?.create && Array.isArray(rawSec.testQuestions.create)) {
+            secQuestions = rawSec.testQuestions.create.map((tq: any, idx: number) => {
+              const q = store.questions.find((it: any) => it.id === tq.questionId) || store.questions[idx] || store.questions[0];
+              return {
+                id: `tq_${item.id}_${idx}`,
+                testSectionId: secId,
+                questionId: tq.questionId || q?.id || `q_${idx}`,
+                orderIndex: tq.orderIndex !== undefined ? tq.orderIndex : idx + 1,
+                question: q,
+              };
+            });
+          } else {
+            secQuestions = store.questions.slice(0, 10).map((q: any, idx: number) => ({
+              id: `tq_${item.id}_${idx}`,
+              testSectionId: secId,
+              questionId: q.id,
+              orderIndex: idx + 1,
+              question: q,
+            }));
+          }
+
           item = {
             ...item,
             sections: [
               {
-                id: `sec_${item.id}_1`,
-                name: 'Section 1',
-                durationMinutes: item.durationMinutes || 120,
+                id: secId,
+                testId: item.id,
+                name: rawSec?.name || 'Section 1',
+                durationMinutes: rawSec?.durationMinutes || item.durationMinutes || 120,
                 orderIndex: 1,
-                _count: { testQuestions: testQuestions.length },
-                testQuestions,
+                _count: { testQuestions: secQuestions.length },
+                testQuestions: secQuestions,
               },
             ],
           };
@@ -899,6 +935,26 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
       // Fallback for questions or tests to ensure candidate queries never return completely empty
       if (filtered.length === 0 && (collectionName === 'questions' || collectionName === 'tests') && list.length > 0) {
         filtered = [...list];
+      }
+
+      if (collectionName === 'tests' || (collectionName as string) === 'test') {
+        filtered = filtered.map((t: any) => {
+          if (!Array.isArray(t.sections)) {
+            return {
+              ...t,
+              sections: [
+                {
+                  id: `sec_${t.id}_1`,
+                  name: (t.sections as any)?.create?.name || 'Official Examination Paper',
+                  durationMinutes: t.durationMinutes || 120,
+                  orderIndex: 1,
+                  _count: { testQuestions: 10 },
+                },
+              ],
+            };
+          }
+          return t;
+        });
       }
 
       if (args?.skip) {
@@ -941,6 +997,50 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
             role: studentRole,
           },
         ];
+      }
+
+      if (collectionName === 'tests' || (collectionName as string) === 'test') {
+        const rawSec = data.sections?.create;
+        const secId = `sec_${newRecord.id}_1`;
+        let secQuestions: any[] = [];
+        if (rawSec?.testQuestions?.create && Array.isArray(rawSec.testQuestions.create)) {
+          secQuestions = rawSec.testQuestions.create.map((tq: any, idx: number) => {
+            const q = store.questions.find((item: any) => item.id === tq.questionId) || store.questions[idx] || store.questions[0];
+            const testQuestionRecord = {
+              id: `tq_${newRecord.id}_${idx}`,
+              testSectionId: secId,
+              questionId: tq.questionId || q?.id || `q_${idx}`,
+              orderIndex: tq.orderIndex !== undefined ? tq.orderIndex : idx + 1,
+              question: q,
+            };
+            store.testQuestions.push(testQuestionRecord);
+            return testQuestionRecord;
+          });
+        } else {
+          secQuestions = store.questions.slice(0, 10).map((q: any, idx: number) => {
+            const testQuestionRecord = {
+              id: `tq_${newRecord.id}_${idx}`,
+              testSectionId: secId,
+              questionId: q.id,
+              orderIndex: idx + 1,
+              question: q,
+            };
+            store.testQuestions.push(testQuestionRecord);
+            return testQuestionRecord;
+          });
+        }
+
+        const sectionRecord = {
+          id: secId,
+          testId: newRecord.id,
+          name: rawSec?.name || 'Official Examination Paper',
+          durationMinutes: rawSec?.durationMinutes || newRecord.durationMinutes || 120,
+          orderIndex: 1,
+          _count: { testQuestions: secQuestions.length },
+          testQuestions: secQuestions,
+        };
+        store.testSections.push(sectionRecord);
+        newRecord.sections = [sectionRecord];
       }
 
       if (collectionName === 'questions') {

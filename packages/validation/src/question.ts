@@ -17,10 +17,10 @@ export const QuestionExplanationSchema = z.object({
 
 export const CreateQuestionBaseSchema = z.object({
   questionText: z.string().min(3, 'Question text must be at least 3 characters long'),
-  subjectId: z.string().uuid('Invalid subject ID format'),
-  chapterId: z.string().uuid('Invalid chapter ID format'),
-  topicId: z.string().uuid('Invalid topic ID format'),
-  subtopicId: z.string().uuid('Invalid subtopic ID format').optional().nullable(),
+  subjectId: z.string().min(1, 'Invalid subject ID format'),
+  chapterId: z.string().min(1, 'Invalid chapter ID format'),
+  topicId: z.string().min(1, 'Invalid topic ID format'),
+  subtopicId: z.string().min(1, 'Invalid subtopic ID format').optional().nullable(),
   questionType: z.nativeEnum(QuestionType).default(QuestionType.MCQ_SINGLE),
   marks: z.number().positive('Marks must be greater than 0').default(1.0),
   negativeMarks: z.number().min(0, 'Negative marks cannot be negative').default(0.33),
@@ -34,8 +34,8 @@ export const CreateQuestionBaseSchema = z.object({
   options: z.array(QuestionOptionSchema).default([]),
   explanation: QuestionExplanationSchema.optional().nullable(),
   metadata: z.record(z.any()).optional().nullable(),
-  createdById: z.string().uuid().optional().nullable(),
-  reviewedById: z.string().uuid().optional().nullable(),
+  createdById: z.string().min(1).optional().nullable(),
+  reviewedById: z.string().min(1).optional().nullable(),
   verifiedAt: z.coerce.date().optional().nullable(),
 });
 

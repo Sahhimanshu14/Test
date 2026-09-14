@@ -131,12 +131,16 @@ function ExamAttemptContent() {
 
         // Flatten questions from sections
         const flatQuestions: ExamQuestion[] = [];
-        tst.sections.forEach((sec) => {
-          sec.testQuestions.forEach((tq) => {
-            flatQuestions.push({
-              ...tq.question,
-              sectionName: sec.name,
-            });
+        const sectionsList = Array.isArray(tst?.sections) ? tst.sections : [];
+        sectionsList.forEach((sec) => {
+          const tqList = Array.isArray(sec?.testQuestions) ? sec.testQuestions : [];
+          tqList.forEach((tq) => {
+            if (tq?.question) {
+              flatQuestions.push({
+                ...tq.question,
+                sectionName: sec?.name || 'Section 1',
+              });
+            }
           });
         });
 

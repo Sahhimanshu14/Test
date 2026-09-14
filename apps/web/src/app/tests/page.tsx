@@ -147,7 +147,7 @@ function TestsContent() {
               passingMarks={test.passingMarks}
               isFullMock={test.isFullMock}
               targetAcademy={test.targetAcademy}
-              sections={test.sections}
+              sections={Array.isArray(test.sections) ? test.sections : []}
               onStart={() => router.push(`/test/${test.id}/instructions`)}
             />
           ))}
