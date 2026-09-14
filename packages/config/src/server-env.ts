@@ -225,5 +225,13 @@ export function validateServerEnv(env: Record<string, unknown> = process.env): S
     const formatted = result.error.format();
     throw new Error(`Server environment configuration failed:\n${JSON.stringify(formatted, null, 2)}`);
   }
+
+  if (!process.env.JWT_ACCESS_SECRET && result.data.JWT_SECRET) {
+    process.env.JWT_ACCESS_SECRET = result.data.JWT_SECRET;
+  }
+  if (!process.env.JWT_REFRESH_SECRET && result.data.JWT_REFRESH_SECRET) {
+    process.env.JWT_REFRESH_SECRET = result.data.JWT_REFRESH_SECRET;
+  }
+
   return result.data;
 }
