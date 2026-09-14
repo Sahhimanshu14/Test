@@ -3,15 +3,13 @@
 # =========================================================
 FROM node:22-alpine AS builder
 
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat python3 make g++
 WORKDIR /app
 
-RUN npm install -g pnpm@12.3.4
+RUN npm install -g pnpm@12.3.4 turbo
 
 # Copy monorepo workspace files
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json ./
-COPY packages/ ./packages/
-COPY apps/web/ ./apps/web/
+COPY . .
 
 # Install dependencies and produce standalone build
 RUN pnpm install --frozen-lockfile
@@ -45,6 +43,6 @@ EXPOSE 3000
 
 # Next.js production web healthcheck
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD wget -qO- http://127.0.0.1:3000/api/health || exit 1
+  CMD wget -qO- http://127.0.0.1:${PORT:-3000}/api/health || exit 1
 
 CMD ["node", "apps/web/server.js"]
