@@ -14,6 +14,24 @@ export function configureApp(app: INestApplication): void {
   app.use(json({ limit: '1mb' }));
   app.use(urlencoded({ extended: true, limit: '1mb' }));
 
+  // Gracefully normalize double slashes and auto-route root-level endpoints to /api/v1
+  app.use((req: any, _res: any, next: any) => {
+    if (typeof req.url === 'string') {
+      if (req.url.startsWith('//')) {
+        req.url = req.url.replace(/^\/+/, '/');
+      }
+      if (
+        !req.url.startsWith('/api/') &&
+        !req.url.startsWith('/health') &&
+        !req.url.startsWith('/ready') &&
+        !req.url.startsWith('/favicon.ico')
+      ) {
+        req.url = `/api/v1${req.url.startsWith('/') ? req.url : `/${req.url}`}`;
+      }
+    }
+    next();
+  });
+
   // 2. Comprehensive Security Headers via Helmet
   app.use(
     helmet({

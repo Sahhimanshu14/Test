@@ -1,10 +1,40 @@
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  (typeof window !== 'undefined'
-    ? `${window.location.origin}/api/v1`
-    : process.env.NODE_ENV === 'production'
-      ? 'https://api.your-domain/api/v1'
-      : 'http://localhost:4000/api/v1');
+function resolveApiBaseUrl(): string {
+  let base = process.env.NEXT_PUBLIC_API_URL;
+  if (!base || base === '/' || base === '""') {
+    if (typeof window !== 'undefined') {
+      return `${window.location.origin}/api/v1`;
+    }
+    return 'http://localhost:4000/api/v1';
+  }
+
+  if (base.startsWith('/')) {
+    if (typeof window !== 'undefined') {
+      base = `${window.location.origin}${base}`;
+    } else {
+      base = `http://localhost:4000${base}`;
+    }
+  }
+
+  base = base.replace(/\/+$/, '');
+  if (!base.endsWith('/api/v1')) {
+    base = `${base}/api/v1`;
+  }
+  return base;
+}
+
+export const API_URL = resolveApiBaseUrl();
+
+export function buildApiUrl(endpoint: string): string {
+  let cleanEndpoint = endpoint.trim();
+  if (cleanEndpoint.startsWith('/api/v1/')) {
+    cleanEndpoint = cleanEndpoint.slice(7);
+  } else if (cleanEndpoint.startsWith('api/v1/')) {
+    cleanEndpoint = cleanEndpoint.slice(6);
+  }
+
+  cleanEndpoint = '/' + cleanEndpoint.replace(/^\/+/, '');
+  return `${API_URL}${cleanEndpoint}`;
+}
 
 export interface ApiResponse<T = any> {
   success: boolean;
@@ -50,7 +80,7 @@ class ApiClient {
     options: RequestInit = {},
     isRetry = false,
   ): Promise<T> {
-    const url = `${API_URL}${endpoint.startsWith('/') ? endpoint : `/${endpoint}`}`;
+    const url = buildApiUrl(endpoint);
     const token = this.getAccessToken();
 
     const headers: Record<string, string> = {
@@ -104,7 +134,7 @@ class ApiClient {
     if (!refreshToken) return false;
 
     try {
-      const response = await fetch(`${API_URL}/auth/refresh`, {
+      const response = await fetch(buildApiUrl('/auth/refresh'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ refreshToken }),
