@@ -18,7 +18,11 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: REDIS_URL
+        value: redis://127.0.0.1:6379
       - key: JWT_EXPIRES_IN
         value: 7d
       - key: CORS_ORIGIN
-        value: "*"
+        value: https://*.vercel.app,http://localhost:3000

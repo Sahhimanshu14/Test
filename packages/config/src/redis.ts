@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const redisConfigSchema = z.object({
-  REDIS_URL: z.string().min(1, 'REDIS_URL is required'),
+  REDIS_URL: z.string().default('redis://127.0.0.1:6379'),
   REDIS_HOST: z.string().default('localhost'),
   REDIS_PORT: z.coerce.number().int().positive().default(6379),
   REDIS_PASSWORD: z.string().optional(),

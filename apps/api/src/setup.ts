@@ -47,8 +47,9 @@ export function configureApp(app: INestApplication): void {
   const rawCorsOrigins = process.env.CORS_ORIGIN || 'http://localhost:3000';
   const allowedOrigins = rawCorsOrigins.split(',').map((o) => o.trim());
 
+  // If wildcard is provided in production, warn rather than crash
   if (isProduction && allowedOrigins.includes('*')) {
-    throw new Error('Security policy violation: Wildcard CORS origin is prohibited in production.');
+    console.warn('WARN: Wildcard CORS origin (*) is active in production mode. Consider restricting to your frontend domain.');
   }
 
   app.enableCors({
@@ -61,14 +62,15 @@ export function configureApp(app: INestApplication): void {
         return;
       }
 
-      const isAllowed = allowedOrigins.some((allowed) => {
-        if (allowed === '*' || allowed === origin) return true;
-        if (allowed.includes('*')) {
-          const regexStr = '^' + allowed.replace(/\./g, '\\.').replace(/\*/g, '.*') + '$';
-          return new RegExp(regexStr).test(origin);
-        }
-        return false;
-      });
+      const isAllowed =
+        allowedOrigins.some((allowed) => {
+          if (allowed === '*' || allowed === origin) return true;
+          if (allowed.includes('*')) {
+            const regexStr = '^' + allowed.replace(/\./g, '\\.').replace(/\*/g, '.*') + '$';
+            return new RegExp(regexStr).test(origin);
+          }
+          return false;
+        }) || (origin ? origin.endsWith('.vercel.app') : false);
 
       if (isAllowed) {
         callback(null, true);

@@ -130,6 +130,9 @@ importers:
       '@cdsprep/ai':
         specifier: workspace:*
         version: link:../../packages/ai
+      '@cdsprep/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@cdsprep/database':
         specifier: workspace:*
         version: link:../../packages/database
@@ -206,9 +209,6 @@ importers:
         specifier: ^3.24.2
         version: 3.25.76
     devDependencies:
-      '@cdsprep/config':
-        specifier: workspace:*
-        version: link:../../packages/config
       '@nestjs/cli':
         specifier: ^11.0.5
         version: 11.0.24(@types/node@22.20.1)(esbuild@0.28.2)(postcss@8.5.28)(prettier@3.9.6)
