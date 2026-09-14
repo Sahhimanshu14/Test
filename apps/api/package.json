@@ -29,6 +29,7 @@
     "@nestjs/throttler": "^6.4.0",
     "argon2": "^0.41.1",
     "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
     "helmet": "^8.0.0",
     "ioredis": "^5.5.0",
     "passport": "^0.7.0",
