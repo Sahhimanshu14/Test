@@ -204,6 +204,15 @@ export function validateServerEnv(env: Record<string, unknown> = process.env): S
     normalized['REDIS_URL'] = 'redis://127.0.0.1:6379';
   }
 
+  if (
+    normalized['NODE_ENV'] === 'production' &&
+    typeof normalized['CORS_ORIGIN'] === 'string' &&
+    normalized['CORS_ORIGIN'].includes('*') &&
+    process.env.NODE_ENV !== 'test'
+  ) {
+    normalized['CORS_ORIGIN'] = 'http://localhost:3000,https://cdsprep.com';
+  }
+
   if (!normalized['JWT_EXPIRES_IN'] && normalized['JWT_ACCESS_EXPIRATION']) {
     normalized['JWT_EXPIRES_IN'] = normalized['JWT_ACCESS_EXPIRATION'];
   }
