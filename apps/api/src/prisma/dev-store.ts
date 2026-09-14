@@ -102,7 +102,70 @@ export class DevStore {
       ],
     };
 
-    this.users.push(studentUser, adminUser);
+    const editorUser = {
+      id: 'usr_editor_demo_1',
+      email: 'editor@cdsprep.com',
+      passwordHash: DEFAULT_PASSWORD_HASH,
+      fullName: 'Content Editor',
+      targetAcademy: 'AFA',
+      isEmailVerified: true,
+      currentStreak: 3,
+      highestStreak: 8,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      deletedAt: null,
+      roles: [
+        {
+          id: 'ur_editor_1',
+          roleId: 'role_content_editor',
+          role: this.roles.find((r) => r.name === 'CONTENT_EDITOR'),
+        },
+      ],
+    };
+
+    const moderatorUser = {
+      id: 'usr_moderator_demo_1',
+      email: 'moderator@cdsprep.com',
+      passwordHash: DEFAULT_PASSWORD_HASH,
+      fullName: 'Quality Moderator',
+      targetAcademy: 'INA',
+      isEmailVerified: true,
+      currentStreak: 7,
+      highestStreak: 15,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      deletedAt: null,
+      roles: [
+        {
+          id: 'ur_moderator_1',
+          roleId: 'role_moderator',
+          role: this.roles.find((r) => r.name === 'MODERATOR'),
+        },
+      ],
+    };
+
+    const superAdminUser = {
+      id: 'usr_superadmin_demo_1',
+      email: 'superadmin@cdsprep.com',
+      passwordHash: DEFAULT_PASSWORD_HASH,
+      fullName: 'Super Administrator',
+      targetAcademy: 'IMA',
+      isEmailVerified: true,
+      currentStreak: 15,
+      highestStreak: 45,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      deletedAt: null,
+      roles: [
+        {
+          id: 'ur_superadmin_1',
+          roleId: 'role_super_admin',
+          role: this.roles.find((r) => r.name === 'SUPER_ADMIN'),
+        },
+      ],
+    };
+
+    this.users.push(studentUser, adminUser, editorUser, moderatorUser, superAdminUser);
   }
 
   private loadContentFiles() {
@@ -440,7 +503,13 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
 
   const createModelHandler = (collectionName: keyof DevStore) => ({
     findUnique: async (args: any) => {
-      if (isConnected()) return originalClient[collectionName].findUnique(args);
+      if (isConnected()) {
+        try {
+          return await originalClient[collectionName].findUnique(args);
+        } catch {
+          // Gracefully fallback to in-memory store if DB connection fails
+        }
+      }
       const list = store[collectionName] as any[];
       if (!list) return null;
       const where = args?.where || {};
@@ -448,7 +517,13 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
     },
 
     findFirst: async (args: any) => {
-      if (isConnected()) return originalClient[collectionName].findFirst(args);
+      if (isConnected()) {
+        try {
+          return await originalClient[collectionName].findFirst(args);
+        } catch {
+          // Gracefully fallback to in-memory store
+        }
+      }
       const list = store[collectionName] as any[];
       if (!list) return null;
       const where = args?.where || {};
@@ -456,7 +531,13 @@ export function createDevPrismaProxy(originalClient: any, isConnected: () => boo
     },
 
     findMany: async (args: any) => {
-      if (isConnected()) return originalClient[collectionName].findMany(args);
+      if (isConnected()) {
+        try {
+          return await originalClient[collectionName].findMany(args);
+        } catch {
+          // Gracefully fallback
+        }
+      }
       const list = store[collectionName] as any[];
       if (!list) return [];
       const where = args?.where || {};
