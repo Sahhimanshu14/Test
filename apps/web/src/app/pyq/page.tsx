@@ -22,6 +22,9 @@ import {
   PlayCircle,
   X,
   ExternalLink,
+  Download,
+  CheckCircle2,
+  HardDrive,
 } from 'lucide-react';
 
 interface PYQPaperItem {
@@ -42,35 +45,21 @@ interface PYQPaperItem {
 }
 
 const FALLBACK_PAPERS: PYQPaperItem[] = [
+  // 1. English Papers
   {
-    id: 'paper-cds-2024-1-math',
+    id: 'paper-cds-2024-2-eng',
     year: 2024,
-    session: 'I',
-    exam: 'CDS I',
-    subjectSlug: 'elementary-maths',
-    title: 'CDS I 2024 — Elementary Mathematics Official Paper',
+    session: 'II',
+    exam: 'CDS II',
+    subjectSlug: 'english',
+    title: 'UPSC CDS II (2024) — English Official Paper',
     totalMarks: 100,
     durationMin: 120,
     source: 'Union Public Service Commission (UPSC)',
     licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
-    attribution: 'Official Question Paper published by UPSC. Reproduced for candidate preparation.',
-    questionCount: 100,
-    subject: { id: 's1', name: 'Elementary Mathematics', slug: 'elementary-maths' },
-  },
-  {
-    id: 'paper-cds-2024-1-gk',
-    year: 2024,
-    session: 'I',
-    exam: 'CDS I',
-    subjectSlug: 'gk',
-    title: 'CDS I 2024 — General Knowledge Official Paper',
-    totalMarks: 100,
-    durationMin: 120,
-    source: 'Union Public Service Commission (UPSC)',
-    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
-    attribution: 'Official Question Paper published by UPSC. Reproduced for candidate preparation.',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
     questionCount: 120,
-    subject: { id: 's2', name: 'General Knowledge', slug: 'gk' },
+    subject: { id: 's3', name: 'English', slug: 'english' },
   },
   {
     id: 'paper-cds-2024-1-eng',
@@ -78,14 +67,106 @@ const FALLBACK_PAPERS: PYQPaperItem[] = [
     session: 'I',
     exam: 'CDS I',
     subjectSlug: 'english',
-    title: 'CDS I 2024 — English Official Paper',
+    title: 'UPSC CDS I (2024) — English Official Paper',
     totalMarks: 100,
     durationMin: 120,
     source: 'Union Public Service Commission (UPSC)',
     licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
-    attribution: 'Official Question Paper published by UPSC. Reproduced for candidate preparation.',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
     questionCount: 120,
     subject: { id: 's3', name: 'English', slug: 'english' },
+  },
+  {
+    id: 'paper-cds-2023-2-eng',
+    year: 2023,
+    session: 'II',
+    exam: 'CDS II',
+    subjectSlug: 'english',
+    title: 'UPSC CDS II (2023) — English Official Paper',
+    totalMarks: 100,
+    durationMin: 120,
+    source: 'Union Public Service Commission (UPSC)',
+    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
+    questionCount: 120,
+    subject: { id: 's3', name: 'English', slug: 'english' },
+  },
+  // 2. General Knowledge (GS) Papers
+  {
+    id: 'paper-cds-2024-2-gk',
+    year: 2024,
+    session: 'II',
+    exam: 'CDS II',
+    subjectSlug: 'gk',
+    title: 'UPSC CDS II (2024) — General Knowledge Official Paper',
+    totalMarks: 100,
+    durationMin: 120,
+    source: 'Union Public Service Commission (UPSC)',
+    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
+    questionCount: 120,
+    subject: { id: 's2', name: 'General Knowledge', slug: 'gk' },
+  },
+  {
+    id: 'paper-cds-2024-1-gk',
+    year: 2024,
+    session: 'I',
+    exam: 'CDS I',
+    subjectSlug: 'gk',
+    title: 'UPSC CDS I (2024) — General Knowledge Official Paper',
+    totalMarks: 100,
+    durationMin: 120,
+    source: 'Union Public Service Commission (UPSC)',
+    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
+    questionCount: 120,
+    subject: { id: 's2', name: 'General Knowledge', slug: 'gk' },
+  },
+  {
+    id: 'paper-cds-2023-2-gk',
+    year: 2023,
+    session: 'II',
+    exam: 'CDS II',
+    subjectSlug: 'gk',
+    title: 'UPSC CDS II (2023) — General Knowledge Official Paper',
+    totalMarks: 100,
+    durationMin: 120,
+    source: 'Union Public Service Commission (UPSC)',
+    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
+    questionCount: 120,
+    subject: { id: 's2', name: 'General Knowledge', slug: 'gk' },
+  },
+  // 3. Mathematics Papers
+  {
+    id: 'paper-cds-2024-2-math',
+    year: 2024,
+    session: 'II',
+    exam: 'CDS II',
+    subjectSlug: 'elementary-maths',
+    title: 'UPSC CDS II (2024) — Elementary Mathematics Official Paper',
+    totalMarks: 100,
+    durationMin: 120,
+    source: 'Union Public Service Commission (UPSC)',
+    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
+    questionCount: 100,
+    subject: { id: 's1', name: 'Elementary Mathematics', slug: 'elementary-maths' },
+  },
+  {
+    id: 'paper-cds-2024-1-math',
+    year: 2024,
+    session: 'I',
+    exam: 'CDS I',
+    subjectSlug: 'elementary-maths',
+    title: 'UPSC CDS I (2024) — Elementary Mathematics Official Paper',
+    totalMarks: 100,
+    durationMin: 120,
+    source: 'Union Public Service Commission (UPSC)',
+    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
+    questionCount: 100,
+    subject: { id: 's1', name: 'Elementary Mathematics', slug: 'elementary-maths' },
   },
   {
     id: 'paper-cds-2023-2-math',
@@ -93,44 +174,14 @@ const FALLBACK_PAPERS: PYQPaperItem[] = [
     session: 'II',
     exam: 'CDS II',
     subjectSlug: 'elementary-maths',
-    title: 'CDS II 2023 — Elementary Mathematics Official Paper',
+    title: 'UPSC CDS II (2023) — Elementary Mathematics Official Paper',
     totalMarks: 100,
     durationMin: 120,
     source: 'Union Public Service Commission (UPSC)',
     licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
-    attribution: 'Official Question Paper published by UPSC. Reproduced for candidate preparation.',
+    attribution: 'Government of India / UPSC. Section 52(1)(q) Indian Copyright Act.',
     questionCount: 100,
     subject: { id: 's1', name: 'Elementary Mathematics', slug: 'elementary-maths' },
-  },
-  {
-    id: 'paper-cds-2023-1-math',
-    year: 2023,
-    session: 'I',
-    exam: 'CDS I',
-    subjectSlug: 'elementary-maths',
-    title: 'CDS I 2023 — Elementary Mathematics Official Paper',
-    totalMarks: 100,
-    durationMin: 120,
-    source: 'Union Public Service Commission (UPSC)',
-    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
-    attribution: 'Official Question Paper published by UPSC. Reproduced for candidate preparation.',
-    questionCount: 100,
-    subject: { id: 's1', name: 'Elementary Mathematics', slug: 'elementary-maths' },
-  },
-  {
-    id: 'paper-cds-2023-1-gk',
-    year: 2023,
-    session: 'I',
-    exam: 'CDS I',
-    subjectSlug: 'gk',
-    title: 'CDS I 2023 — General Knowledge Official Paper',
-    totalMarks: 100,
-    durationMin: 120,
-    source: 'Union Public Service Commission (UPSC)',
-    licenseType: 'PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS',
-    attribution: 'Official Question Paper published by UPSC. Reproduced for candidate preparation.',
-    questionCount: 120,
-    subject: { id: 's2', name: 'General Knowledge', slug: 'gk' },
   },
 ];
 
@@ -272,6 +323,188 @@ function PYQCatalogContent() {
             <FileText className="h-3.5 w-3.5 text-purple-400" />
             <span>English Library</span>
           </Link>
+        </div>
+      </div>
+
+      {/* Official 20-Year PYQ Books & Verified Answer Keys Vault */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-lg sm:text-xl font-black text-white flex items-center gap-2">
+              <Download className="h-5 w-5 text-emerald-400" />
+              <span>Official 20-Year PYQ Books & Verified Answer Keys</span>
+            </h2>
+            <p className="text-xs text-slate-400">
+              Download complete, chapter-wise question booklets and verified UPSC answer keys for offline preparation.
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold text-emerald-300">
+              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+              <span>Full Offline PDF Suite</span>
+            </span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* 1. English PYQ Card */}
+          <Card className="p-5 border-slate-800 bg-gradient-to-b from-slate-900/90 to-purple-950/20 space-y-4 relative overflow-hidden group hover:border-purple-500/40 transition shadow-lg">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
+                  <FileText className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-sm sm:text-base">English PYQ Archive</h3>
+                  <p className="text-[11px] text-purple-300 font-semibold">2,211+ Questions • 14 Chapters</p>
+                </div>
+              </div>
+              <Badge variant="outline" className="text-purple-400 border-purple-500/30 text-[10px]">
+                Official UPSC
+              </Badge>
+            </div>
+
+            <p className="text-xs text-slate-400 line-clamp-2">
+              Spotting Errors, Synonyms & Antonyms, Idioms, Sentence Completion, Cloze Tests & Reading Passages.
+            </p>
+
+            <div className="space-y-2 pt-1 border-t border-slate-800/60">
+              <a
+                href="/api/pyq/download/english"
+                download="CDS_English_Chapterwise_PYQ.pdf"
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-bold bg-purple-500 hover:bg-purple-400 text-slate-950 transition shadow-md"
+              >
+                <Download className="h-3.5 w-3.5" />
+                <span>Download Question Book (PDF)</span>
+              </a>
+
+              <div className="grid grid-cols-2 gap-2">
+                <a
+                  href="/api/pyq/download/english-key"
+                  download="CDS_English_Chapterwise_Answer_Key.pdf"
+                  className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-semibold border border-purple-500/30 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 transition"
+                >
+                  <CheckCircle2 className="h-3 w-3 text-purple-400" />
+                  <span>Answer Key</span>
+                </a>
+                <a
+                  href="/api/pyq/download/raw-english"
+                  download="UPSC_CDS_English_Official_Archive_Raw.pdf"
+                  className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-semibold border border-slate-800 bg-slate-950/60 text-slate-400 hover:text-white transition"
+                  title="Original 294 MB Scanned Book"
+                >
+                  <HardDrive className="h-3 w-3" />
+                  <span>Raw Scan</span>
+                </a>
+              </div>
+            </div>
+          </Card>
+
+          {/* 2. General Knowledge (GS) PYQ Card */}
+          <Card className="p-5 border-slate-800 bg-gradient-to-b from-slate-900/90 to-amber-950/20 space-y-4 relative overflow-hidden group hover:border-amber-500/40 transition shadow-lg">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400">
+                  <Layers className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-sm sm:text-base">GS / GK PYQ Archive</h3>
+                  <p className="text-[11px] text-amber-300 font-semibold">Official UPSC Papers • 4 Pillars</p>
+                </div>
+              </div>
+              <Badge variant="outline" className="text-amber-400 border-amber-500/30 text-[10px]">
+                Official UPSC
+              </Badge>
+            </div>
+
+            <p className="text-xs text-slate-400 line-clamp-2">
+              Indian Polity & Constitution, Indian History & Freedom Struggle, Physical & Indian Geography, Science & Defence.
+            </p>
+
+            <div className="space-y-2 pt-1 border-t border-slate-800/60">
+              <a
+                href="/api/pyq/download/gs"
+                download="CDS_GS_Chapterwise_PYQ.pdf"
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition shadow-md"
+              >
+                <Download className="h-3.5 w-3.5" />
+                <span>Download Question Book (PDF)</span>
+              </a>
+
+              <div className="grid grid-cols-2 gap-2">
+                <a
+                  href="/api/pyq/download/gs-key"
+                  download="CDS_GS_Chapterwise_Answer_Key.pdf"
+                  className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-semibold border border-amber-500/30 bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 transition"
+                >
+                  <CheckCircle2 className="h-3 w-3 text-amber-400" />
+                  <span>Answer Key</span>
+                </a>
+                <a
+                  href="/api/pyq/download/raw-gs"
+                  download="UPSC_CDS_GS_Official_Archive_Raw.pdf"
+                  className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-semibold border border-slate-800 bg-slate-950/60 text-slate-400 hover:text-white transition"
+                  title="Original 508 MB Scanned Book"
+                >
+                  <HardDrive className="h-3 w-3" />
+                  <span>Raw Scan</span>
+                </a>
+              </div>
+            </div>
+          </Card>
+
+          {/* 3. Elementary Mathematics PYQ Card */}
+          <Card className="p-5 border-slate-800 bg-gradient-to-b from-slate-900/90 to-emerald-950/20 space-y-4 relative overflow-hidden group hover:border-emerald-500/40 transition shadow-lg">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                  <BookOpen className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-white text-sm sm:text-base">Math PYQ Archive</h3>
+                  <p className="text-[11px] text-emerald-300 font-semibold">2,799+ Questions • 13 Chapters</p>
+                </div>
+              </div>
+              <Badge variant="outline" className="text-emerald-400 border-emerald-500/30 text-[10px]">
+                Official UPSC
+              </Badge>
+            </div>
+
+            <p className="text-xs text-slate-400 line-clamp-2">
+              Number Theory, Arithmetic, Algebra, Polynomials, Trigonometry, Geometry, Mensuration & Statistics.
+            </p>
+
+            <div className="space-y-2 pt-1 border-t border-slate-800/60">
+              <a
+                href="/api/pyq/download/math"
+                download="CDS_Math_Chapterwise_PYQ.pdf"
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-md"
+              >
+                <Download className="h-3.5 w-3.5" />
+                <span>Download Question Book (PDF)</span>
+              </a>
+
+              <div className="grid grid-cols-2 gap-2">
+                <a
+                  href="/api/pyq/download/math-key"
+                  download="CDS_Math_Chapterwise_Answer_Key.pdf"
+                  className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-semibold border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 transition"
+                >
+                  <CheckCircle2 className="h-3 w-3 text-emerald-400" />
+                  <span>Answer Key</span>
+                </a>
+                <a
+                  href="/api/pyq/download/raw-math"
+                  download="UPSC_CDS_Math_Official_Archive_Raw.pdf"
+                  className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg text-[11px] font-semibold border border-slate-800 bg-slate-950/60 text-slate-400 hover:text-white transition"
+                  title="Original 416 MB Scanned Book"
+                >
+                  <HardDrive className="h-3 w-3" />
+                  <span>Raw Scan</span>
+                </a>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
 

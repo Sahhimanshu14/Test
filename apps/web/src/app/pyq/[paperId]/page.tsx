@@ -26,6 +26,7 @@ import {
   Send,
   Flag,
   ExternalLink,
+  Download,
 } from 'lucide-react';
 
 interface QuestionOption {
@@ -322,6 +323,14 @@ function PYQPaperContent() {
               <PlayCircle className="h-5 w-5" />
               <span>{starting ? 'Starting Exam...' : 'Start Timed Exam'}</span>
             </Button>
+            <a
+              href={`/api/pyq/download/${paper.subjectSlug === 'elementary-maths' ? 'math' : paper.subjectSlug === 'gk' ? 'gs' : 'english'}`}
+              download
+              className="py-1.5 px-3 rounded-lg border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition text-center"
+            >
+              <Download className="h-3.5 w-3.5 text-emerald-400" />
+              <span>Download PDF Book</span>
+            </a>
             <span className="text-[10px] text-slate-400 text-center">
               Authoritative server clock • Real CDS grading
             </span>

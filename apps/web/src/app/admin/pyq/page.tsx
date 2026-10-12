@@ -17,6 +17,10 @@ import {
   Filter,
   RefreshCw,
   Scale,
+  Download,
+  Upload,
+  FileText,
+  CheckCircle2,
 } from 'lucide-react';
 import { RoleType } from '@cdsprep/types';
 import { apiRequest } from '../../../lib/api';
@@ -184,6 +188,122 @@ function AdminPyqContent() {
           </Button>
         </div>
       </div>
+
+      {/* Official PYQ PDF Document Asset Deployments */}
+      <Card className="p-5 border-slate-800 bg-slate-900/80 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-sm font-bold text-white flex items-center gap-2">
+              <Download className="h-4 w-4 text-emerald-400" />
+              <span>Official 20-Year PYQ Master Booklets & Answer Keys (Live on Candidate Site)</span>
+            </h2>
+            <p className="text-xs text-slate-400">
+              Active offline PDF documents distributed to students under Indian Copyright Act Section 52(1)(q).
+            </p>
+          </div>
+          <Badge variant="outline" className="text-emerald-400 border-emerald-500/30 text-[11px] self-start sm:self-auto">
+            Static Asset Storage Synced
+          </Badge>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {/* English File Box */}
+          <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-950/70 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <FileText className="h-4 w-4 text-purple-400" />
+                <span className="font-bold text-xs text-white">English PYQ</span>
+              </div>
+              <span className="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                2,211 Qs
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400">14 Chapters • CDS_English_Chapterwise_PYQ.pdf</p>
+            <div className="flex items-center gap-2 pt-1 border-t border-slate-800/80">
+              <a
+                href="/api/pyq/download/english"
+                className="text-[11px] text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-1"
+                download
+              >
+                <Download className="h-3 w-3" />
+                <span>Question Book</span>
+              </a>
+              <span className="text-slate-700">•</span>
+              <a
+                href="/api/pyq/download/english-key"
+                className="text-[11px] text-slate-400 hover:text-white flex items-center gap-1"
+                download
+              >
+                <span>Answer Key</span>
+              </a>
+            </div>
+          </div>
+
+          {/* GS File Box */}
+          <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-950/70 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Layers className="h-4 w-4 text-amber-400" />
+                <span className="font-bold text-xs text-white">General Knowledge</span>
+              </div>
+              <span className="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                4 Pillars
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400">Polity, History, Geo, Science • CDS_GS_Chapterwise_PYQ.pdf</p>
+            <div className="flex items-center gap-2 pt-1 border-t border-slate-800/80">
+              <a
+                href="/api/pyq/download/gs"
+                className="text-[11px] text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1"
+                download
+              >
+                <Download className="h-3 w-3" />
+                <span>Question Book</span>
+              </a>
+              <span className="text-slate-700">•</span>
+              <a
+                href="/api/pyq/download/gs-key"
+                className="text-[11px] text-slate-400 hover:text-white flex items-center gap-1"
+                download
+              >
+                <span>Answer Key</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Math File Box */}
+          <div className="p-3.5 rounded-xl border border-slate-800 bg-slate-950/70 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-emerald-400" />
+                <span className="font-bold text-xs text-white">Elementary Math</span>
+              </div>
+              <span className="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                2,799 Qs
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400">13 Chapters • CDS_Math_Chapterwise_PYQ.pdf</p>
+            <div className="flex items-center gap-2 pt-1 border-t border-slate-800/80">
+              <a
+                href="/api/pyq/download/math"
+                className="text-[11px] text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1"
+                download
+              >
+                <Download className="h-3 w-3" />
+                <span>Question Book</span>
+              </a>
+              <span className="text-slate-700">•</span>
+              <a
+                href="/api/pyq/download/math-key"
+                className="text-[11px] text-slate-400 hover:text-white flex items-center gap-1"
+                download
+              >
+                <span>Answer Key</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </Card>
 
       {/* Legal & Compliance Notice */}
       <Card className="p-4 border-slate-800 bg-slate-900/60 flex items-start gap-3">

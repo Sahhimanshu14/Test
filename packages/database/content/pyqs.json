@@ -26,12 +26,28 @@
         "negativeMarks": 0.28,
         "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "Either the officer or his subordinates", "isCorrect": false },
-          { "identifier": "B", "optionText": "has failed to submit", "isCorrect": true },
-          { "identifier": "C", "optionText": "the preliminary reconnaissance report", "isCorrect": false },
-          { "identifier": "D", "optionText": "No error", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "Either the officer or his subordinates",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "has failed to submit",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "the preliminary reconnaissance report",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "No error",
+            "isCorrect": false
+          }
         ],
-        "explanation": "When two subjects are joined by correlative conjunctions such as 'either... or' or 'neither... nor', the verb must agree in number with the subject closer to it (the proximity rule). Here, the plural noun 'his subordinates' is closest to the auxiliary verb, so 'has failed' must be replaced with 'have failed'.\n\nCorrect sentence: 'Either the officer or his subordinates have failed to submit the preliminary reconnaissance report.'",
+        "explanation": "When two subjects are joined by correlative conjunctions such as 'either... or' or 'neither... nor', the verb must agree in number with the subject closer to it (the proximity rule). Here, 'his subordinates' is plural, so 'has failed' must be replaced with 'have failed'.",
         "keyConcept": "Proximity rule in Subject-Verb Agreement with correlative conjunctions"
       },
       {
@@ -39,18 +55,34 @@
         "chapterSlug": "vocabulary-usage",
         "topicSlug": "synonyms-antonyms",
         "subtopicSlug": "contextual-synonyms",
-        "questionText": "Select the word that is most nearly SIMILAR in meaning to the capitalized word in the sentence:\n\nThe commander exhibited exemplary TENACITY during the intense counter-insurgency operation.",
+        "questionText": "Select the word that is most nearly SIMILAR in meaning to the capitalized word:\nThe commander exhibited exemplary TENACITY during the intense counter-insurgency operation.",
         "difficulty": "MEDIUM",
         "marks": 0.83,
         "negativeMarks": 0.28,
         "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "Perseverance", "isCorrect": true },
-          { "identifier": "B", "optionText": "Hesitation", "isCorrect": false },
-          { "identifier": "C", "optionText": "Ambiguity", "isCorrect": false },
-          { "identifier": "D", "optionText": "Clemency", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "Perseverance",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Hesitation",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Ambiguity",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Clemency",
+            "isCorrect": false
+          }
         ],
-        "explanation": "'Tenacity' denotes the quality of determination, persistent firmness, and dogged endurance in the face of adversity. Its closest synonym among the given options is 'Perseverance'.\n- 'Hesitation': reluctance or indecision\n- 'Ambiguity': state of having multiple or unclear meanings\n- 'Clemency': leniency or mercy towards offenders",
+        "explanation": "'Tenacity' denotes the quality of persistent determination, firmness, and endurance in adversity. Its closest synonym is 'Perseverance'.",
         "keyConcept": "Contextual synonyms in UPSC military and administrative vocabulary"
       },
       {
@@ -58,19 +90,228 @@
         "chapterSlug": "sentence-arrangement",
         "topicSlug": "ordering-of-words",
         "subtopicSlug": "pqrs-syntactic-links",
-        "questionText": "Rearrange the jumbled parts to form a grammatically coherent sentence:\n\n(P) for sustainable regional stability\n(Q) multilateral maritime coordination\n(R) remains paramount in the Indo-Pacific\n(S) across key maritime choke points",
+        "questionText": "Rearrange the jumbled parts to form a grammatically coherent sentence:\n(P) for sustainable regional stability\n(Q) multilateral maritime coordination\n(R) remains paramount in the Indo-Pacific\n(S) across key maritime choke points",
         "difficulty": "MEDIUM",
         "marks": 0.83,
         "negativeMarks": 0.28,
         "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "Q - R - P - S", "isCorrect": false },
-          { "identifier": "B", "optionText": "Q - S - R - P", "isCorrect": true },
-          { "identifier": "C", "optionText": "P - Q - S - R", "isCorrect": false },
-          { "identifier": "D", "optionText": "R - P - Q - S", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "Q - R - P - S",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Q - S - R - P",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "P - Q - S - R",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "R - P - Q - S",
+            "isCorrect": false
+          }
         ],
-        "explanation": "Syntactic analysis:\n- Subject: (Q) 'multilateral maritime coordination'\n- Adverbial modifier: (S) 'across key maritime choke points'\n- Predicate verb: (R) 'remains paramount in the Indo-Pacific'\n- Purpose complement: (P) 'for sustainable regional stability'\n\nFull coherent sequence: 'Multilateral maritime coordination across key maritime choke points remains paramount in the Indo-Pacific for sustainable regional stability' -> Q-S-R-P.",
+        "explanation": "Subject: (Q) 'multilateral maritime coordination', Adverbial: (S) 'across key maritime choke points', Predicate: (R) 'remains paramount in the Indo-Pacific', Complement: (P) 'for sustainable regional stability'. Correct order: Q-S-R-P.",
         "keyConcept": "Syntactic sequencing and prepositional modifier placement in English sentences"
+      },
+      {
+        "questionNumber": 4,
+        "chapterSlug": "vocabulary-usage",
+        "topicSlug": "synonyms-antonyms",
+        "subtopicSlug": "tonal-antonyms",
+        "questionText": "Select the word that is most nearly OPPOSITE in meaning to the capitalized word:\nThe general's Belligerent posture alienated several allied diplomatic missions.",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Aggressive",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Conciliatory",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "Hostile",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Defiant",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "'Belligerent' means hostile, aggressive, or eager to fight. The opposite is 'Conciliatory', meaning intended to placate or pacify.",
+        "keyConcept": "Tonal antonyms in diplomatic and military vocabulary"
+      },
+      {
+        "questionNumber": 5,
+        "chapterSlug": "spotting-errors",
+        "topicSlug": "tenses-and-conditionals",
+        "subtopicSlug": "past-perfect-sequence",
+        "questionText": "Scarcely had the artillery barrage ceased (A) / then the mechanized infantry (B) / commenced its advance across the valley (C) / No error (D)",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Scarcely had the artillery barrage ceased",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "then the mechanized infantry",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "commenced its advance across the valley",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "No error",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The correlative pair for 'Scarcely' or 'Hardly' is 'when' or 'before', NEVER 'then' or 'than'. Replace 'then' with 'when'.",
+        "keyConcept": "Inversion and correlative conjunctions (Hardly/Scarcely... when)"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2024,
+      "session": "I",
+      "exam": "CDS",
+      "subjectSlug": "english",
+      "title": "UPSC CDS I (2024) — English Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "spotting-errors",
+        "topicSlug": "prepositions-and-phrasal-verbs",
+        "subtopicSlug": "fixed-prepositions",
+        "questionText": "The special task force was charged (A) / with orchestrating the evacuation (B) / and complied to all standard protocols (C) / No error (D)",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "The special task force was charged",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "with orchestrating the evacuation",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "and complied to all standard protocols",
+            "isCorrect": true
+          },
+          {
+            "identifier": "D",
+            "optionText": "No error",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The verb 'comply' takes the fixed preposition 'with', not 'to'. Therefore, 'complied to' must be corrected to 'complied with'.",
+        "keyConcept": "Fixed prepositions after standard verbs (comply with, adhere to, abide by)"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "vocabulary-usage",
+        "topicSlug": "idioms-phrases",
+        "subtopicSlug": "military-action-idioms",
+        "questionText": "Select the most appropriate meaning of the given idiom:\n'To burn one's bridges'",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "To destroy all routes of retreat or reconciliation",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "To celebrate a military triumph with illumination",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "To build rapid infrastructure under hostile fire",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "To misunderstand orders issued by the commander",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "'To burn one's bridges' means to take an irreversible action that permanently cuts off all possible ways of returning to a previous position.",
+        "keyConcept": "Classic military metaphors in idioms and phrases"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "sentence-arrangement",
+        "topicSlug": "ordering-of-sentences",
+        "subtopicSlug": "s1-s6-chronology",
+        "questionText": "Arrange the sentences P, Q, R, S between S1 and S6 to produce a coherent logical sequence:\nS1: High-altitude combat demands exceptional physiological acclimatization.\n(P) At extreme heights, atmospheric pressure drops drastically.\n(Q) Consequently, arterial oxygen saturation diminishes rapidly.\n(R) Without phased staging, pulmonary edema can incapacitate troops.\n(S) Graduated ascent schedules are thus rigorously enforced.\nS6: Elite mountain regiments adhere strictly to these operational guidelines.",
+        "difficulty": "HARD",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "P - Q - R - S",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Q - P - S - R",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "R - S - P - Q",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "S - R - Q - P",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Logical cause-and-effect flow: (P) Pressure drops -> (Q) Oxygen drops -> (R) Danger of edema -> (S) Ascent schedules enforced. Sequence P-Q-R-S links seamlessly from S1 to S6.",
+        "keyConcept": "Paragraph coherence and chronological consequence in S1-S6 sequences"
       }
     ]
   },
@@ -99,53 +340,294 @@
         "difficulty": "MEDIUM",
         "marks": 0.83,
         "negativeMarks": 0.28,
-        "questionType": "STATEMENT_BASED",
+        "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "1 only", "isCorrect": true },
-          { "identifier": "B", "optionText": "2 only", "isCorrect": false },
-          { "identifier": "C", "optionText": "Both 1 and 2", "isCorrect": false },
-          { "identifier": "D", "optionText": "Neither 1 nor 2", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "1 only",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "2 only",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Both 1 and 2",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Neither 1 nor 2",
+            "isCorrect": false
+          }
         ],
-        "explanation": "- Statement 1 is CORRECT: The writ of Quo-Warranto ('By what warrant or authority') is issued by the Supreme Court (Art. 32) or High Courts (Art. 226) to enquire into the legality of the claim of a person to a substantive public office of a permanent nature.\n- Statement 2 is INCORRECT: Unlike the other four writs, Quo-Warranto can be moved by ANY citizen, even if he or she is not personally aggrieved, because it affects the interest of the public at large.",
-        "keyConcept": "Locus standi exceptions in Article 32 writs (Quo-Warranto)"
+        "explanation": "Statement 1 is correct: Quo-Warranto is issued by the Supreme Court (Art 32) or High Court (Art 226) to prevent illegal usurpation of a public office. Statement 2 is incorrect: Any public-spirited citizen can seek Quo-Warranto without personal grievance.",
+        "keyConcept": "Writ of Quo-Warranto and standing criteria under Articles 32 and 226"
       },
       {
         "questionNumber": 2,
-        "chapterSlug": "general-science-defence",
-        "topicSlug": "physics-mechanics-optics",
-        "subtopicSlug": "wave-optics-refraction",
-        "questionText": "Which one of the following optical phenomena is primarily responsible for the brilliant sparkle observed in a well-cut diamond?",
+        "chapterSlug": "geography",
+        "topicSlug": "indian-geography",
+        "subtopicSlug": "himalayan-peninsular-rivers",
+        "questionText": "In which one of the following islands of India is an active volcano located?\n(a) Car Nicobar Island\n(b) Nancowry Island\n(c) Barren Island\n(d) Maya Bunder Island",
         "difficulty": "EASY",
         "marks": 0.83,
         "negativeMarks": 0.28,
         "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "Diffraction of light", "isCorrect": false },
-          { "identifier": "B", "optionText": "Total internal reflection of light", "isCorrect": true },
-          { "identifier": "C", "optionText": "Polarization of light", "isCorrect": false },
-          { "identifier": "D", "optionText": "Atmospheric scattering of light", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "Car Nicobar Island",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Nancowry Island",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Barren Island",
+            "isCorrect": true
+          },
+          {
+            "identifier": "D",
+            "optionText": "Maya Bunder Island",
+            "isCorrect": false
+          }
         ],
-        "explanation": "Diamond has a very high refractive index ($n \\approx 2.42$), which produces an unusually small critical angle:\n$$\\sin \\theta_c = \\frac{1}{n} = \\frac{1}{2.42} \\approx 0.4132 \\implies \\theta_c \\approx 24.4^\\circ$$\nBecause of the facets cut into the gemstone, light entering the diamond strikes interior boundaries at angles exceeding $24.4^\\circ$, undergoing multiple total internal reflections before exiting through the top face, producing intense sparkle.",
-        "keyConcept": "Total Internal Reflection and Critical Angle in optics"
+        "explanation": "Barren Island, situated in the Andaman Sea approximately 138 km northeast of Port Blair, is the only active volcano along the chain from Sumatra to Myanmar in the South Asian subcontinent.",
+        "keyConcept": "Volcanic landforms and insular physiography of India"
       },
       {
         "questionNumber": 3,
+        "chapterSlug": "indian-history",
+        "topicSlug": "ancient-medieval-india",
+        "subtopicSlug": "indus-vedic-period",
+        "questionText": "Which one of the following Harappan sites has provided evidence of a ploughed agricultural field with furrow marks?\n(a) Kalibangan\n(b) Lothal\n(c) Dholavira\n(d) Banawali",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Kalibangan",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Lothal",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Dholavira",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Banawali",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Kalibangan in Hanumangarh district, Rajasthan, yielded conclusive archaeological evidence of a ploughed field dated to the Early Harappan phase, exhibiting two grids of furrows at right angles.",
+        "keyConcept": "Agricultural technologies and urban layout in Harappan civilization"
+      },
+      {
+        "questionNumber": 4,
         "chapterSlug": "general-science-defence",
-        "topicSlug": "defence-missiles-commands",
-        "subtopicSlug": "missile-systems-drdo",
-        "questionText": "With reference to the Indian Armed Forces, the 'BrahMos' missile is classified as which one of the following?",
+        "topicSlug": "physics-mechanics-optics",
+        "subtopicSlug": "wave-optics-refraction",
+        "questionText": "A person suffering from myopia (near-sightedness) is unable to see distant objects clearly. This visual defect is corrected by using:\n(a) Convex lens\n(b) Concave lens\n(c) Bifocal lens\n(d) Cylindrical lens",
         "difficulty": "EASY",
         "marks": 0.83,
         "negativeMarks": 0.28,
         "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "Subsonic intercontinental ballistic missile", "isCorrect": false },
-          { "identifier": "B", "optionText": "Supersonic cruise missile", "isCorrect": true },
-          { "identifier": "C", "optionText": "Surface-to-air anti-ballistic missile", "isCorrect": false },
-          { "identifier": "D", "optionText": "Air-to-air beyond-visual-range missile", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "Convex lens",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Concave lens",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "Bifocal lens",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Cylindrical lens",
+            "isCorrect": false
+          }
         ],
-        "explanation": "BrahMos is a joint venture between India's DRDO and Russia's NPO Mashinostroyeniya. It is a two-stage supersonic cruise missile powered by a solid propellant booster and a liquid ramjet engine, travelling at speeds of Mach 2.8 to 3.0 across land, sea, and air platforms.",
-        "keyConcept": "BrahMos missile propulsion and velocity classification"
+        "explanation": "In myopia, light rays from distant objects converge in front of the retina. A diverging (concave) lens provides negative optical power, diverging rays so the focal point falls precisely on the retina.",
+        "keyConcept": "Optical defects of human eye and corrective lens principles"
+      },
+      {
+        "questionNumber": 5,
+        "chapterSlug": "general-science-defence",
+        "topicSlug": "defence-missiles-commands",
+        "subtopicSlug": "missile-systems-drdo",
+        "questionText": "The BrahMos supersonic cruise missile is a joint military venture between India and which foreign country?\n(a) France\n(b) Russia\n(c) Israel\n(d) United States",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "France",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Russia",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "Israel",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "United States",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "BrahMos is developed by BrahMos Aerospace, a joint venture established in 1998 between DRDO of India and NPO Mashinostroyeniya of Russia. Its name honors the Brahmaputra and Moskva rivers.",
+        "keyConcept": "Strategic missile partnerships and DRDO defence programmes"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2024,
+      "session": "I",
+      "exam": "CDS",
+      "subjectSlug": "gk",
+      "title": "UPSC CDS I (2024) — General Knowledge Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "indian-polity",
+        "topicSlug": "judiciary-constitutional-bodies",
+        "subtopicSlug": "supreme-court-jurisdiction",
+        "questionText": "Which Article of the Constitution of India mandates that the law declared by the Supreme Court shall be binding on all courts within the territory of India?\n(a) Article 141\n(b) Article 142\n(c) Article 143\n(d) Article 144",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Article 141",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Article 142",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Article 143",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Article 144",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Article 141 establishes the doctrine of precedent: 'The law declared by the Supreme Court shall be binding on all courts within the territory of India.'",
+        "keyConcept": "Precedent and binding jurisdiction of the Supreme Court under Article 141"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "geography",
+        "topicSlug": "physical-geography",
+        "subtopicSlug": "plate-tectonics",
+        "questionText": "Which one of the following is the oldest mountain range in India, formed during the Proterozoic eon?\n(a) The Himalayas\n(b) The Aravalli Range\n(c) The Western Ghats\n(d) The Vindhya Range",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "The Himalayas",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "The Aravalli Range",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "The Western Ghats",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "The Vindhya Range",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The Aravalli Range is one of the world's oldest fold mountain systems, having originated in the Precambrian era during the Aravalli-Delhi orogeny.",
+        "keyConcept": "Orogenic classification and geochronology of Indian relief"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "indian-history",
+        "topicSlug": "modern-india-freedom-movement",
+        "subtopicSlug": "gandhian-movements",
+        "questionText": "The historic Poona Pact of September 1932 was signed between Mahatma Gandhi and:\n(a) Dr. B.R. Ambedkar\n(b) Mohammad Ali Jinnah\n(c) Subhas Chandra Bose\n(d) Motilal Nehru",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Dr. B.R. Ambedkar",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Mohammad Ali Jinnah",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Subhas Chandra Bose",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Motilal Nehru",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The Poona Pact was signed on 24 September 1932 at Yerwada Jail between Dr. B.R. Ambedkar and Madan Mohan Malaviya (representing Gandhi), abandoning separate electorates in exchange for increased reserved seats in joint electorates.",
+        "keyConcept": "Communal Award and Poona Pact in Indian Constitutional evolution"
       }
     ]
   },
@@ -167,41 +649,670 @@
     "questions": [
       {
         "questionNumber": 1,
-        "chapterSlug": "trigonometry",
-        "topicSlug": "trigonometric-identities",
-        "subtopicSlug": "pythagorean-identities",
-        "questionText": "If $\\sec \\theta + \\tan \\theta = 3$, where $0^\\circ < \\theta < 90^\\circ$, then what is the value of $\\sin \\theta$?",
-        "difficulty": "MEDIUM",
-        "marks": 1.0,
-        "negativeMarks": 0.33,
-        "questionType": "MCQ_SINGLE",
-        "options": [
-          { "identifier": "A", "optionText": "$\\frac{4}{5}$", "isCorrect": true },
-          { "identifier": "B", "optionText": "$\\frac{3}{5}$", "isCorrect": false },
-          { "identifier": "C", "optionText": "$\\frac{1}{3}$", "isCorrect": false },
-          { "identifier": "D", "optionText": "$\\frac{2}{3}$", "isCorrect": false }
-        ],
-        "explanation": "Using the fundamental Pythagorean trigonometric identity:\n$$\\sec^2 \\theta - \\tan^2 \\theta = 1$$\n$$(\\sec \\theta + \\tan \\theta)(\\sec \\theta - \\tan \\theta) = 1$$\n\nGiven $\\sec \\theta + \\tan \\theta = 3$:\n$$\\sec \\theta - \\tan \\theta = \\frac{1}{3}$$\n\nAdding both equations:\n$$2 \\sec \\theta = 3 + \\frac{1}{3} = \\frac{10}{3} \\implies \\sec \\theta = \\frac{5}{3} \\implies \\cos \\theta = \\frac{3}{5}$$\n\nSubtracting the equations:\n$$2 \\tan \\theta = 3 - \\frac{1}{3} = \\frac{8}{3} \\implies \\tan \\theta = \\frac{4}{3}$$\n\nNow, compute $\\sin \\theta$:\n$$\\sin \\theta = \\tan \\theta \\times \\cos \\theta = \\frac{4}{3} \\times \\frac{3}{5} = \\frac{4}{5}$$\n\nThus, $\\sin \\theta = \\frac{4}{5}$.",
-        "keyConcept": "Trigonometric reciprocal relation between $(\\sec\\theta + \\tan\\theta)$ and $(\\sec\\theta - \\tan\\theta)$"
-      },
-      {
-        "questionNumber": 2,
         "chapterSlug": "arithmetic",
         "topicSlug": "number-systems-divisibility",
         "subtopicSlug": "unit-digits-cyclicity",
-        "questionText": "What is the unit digit in the expansion of $3^{65} \\times 6^{59} \\times 7^{71}$?",
+        "questionText": "What is the unit digit of the product $7^{105} \\times 3^{58}$?\n(a) 1\n(b) 3\n(c) 7\n(d) 9",
         "difficulty": "MEDIUM",
         "marks": 1.0,
         "negativeMarks": 0.33,
         "questionType": "MCQ_SINGLE",
         "options": [
-          { "identifier": "A", "optionText": "$2$", "isCorrect": false },
-          { "identifier": "B", "optionText": "$4$", "isCorrect": true },
-          { "identifier": "C", "optionText": "$6$", "isCorrect": false },
-          { "identifier": "D", "optionText": "$8$", "isCorrect": false }
+          {
+            "identifier": "A",
+            "optionText": "1",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "3",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "7",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "9",
+            "isCorrect": false
+          }
         ],
-        "explanation": "We determine the unit digit of each factor using power cyclicity modulo 10:\n\n1. **For $3^{65}$**: Powers of 3 have a cyclicity of 4 ($3^1=3, 3^2=9, 3^3=7, 3^4=1$).\n   $$65 = 4 \\times 16 + 1 \\implies 3^{65} \\equiv 3^1 \\equiv 3 \\pmod{10}$$\n\n2. **For $6^{59}$**: Any positive integral power of 6 always ends in 6.\n   $$6^{59} \\equiv 6 \\pmod{10}$$\n\n3. **For $7^{71}$**: Powers of 7 have a cyclicity of 4 ($7^1=7, 7^2=9, 7^3=3, 7^4=1$).\n   $$71 = 4 \\times 17 + 3 \\implies 7^{71} \\equiv 7^3 \\equiv 3 \\pmod{10}$$\n\nMultiply the unit digits:\n$$\\text{Unit digit} = (3 \\times 6 \\times 3) \\pmod{10} = 54 \\pmod{10} = 4$$",
-        "keyConcept": "Power cyclicity and modular arithmetic modulo 10"
+        "explanation": "1. Powers of 7 have cyclicity 4 (7, 9, 3, 1). $105 \\pmod 4 = 1$, so unit digit of $7^{105}$ is 7.\n2. Powers of 3 have cyclicity 4 (3, 9, 7, 1). $58 \\pmod 4 = 2$, so unit digit of $3^{58}$ is 9.\n3. Product unit digit: $7 \\times 9 = 63$, ending in 3.",
+        "keyConcept": "Cyclicity of powers in modular arithmetic and unit digit evaluation"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "trigonometry",
+        "topicSlug": "trigonometric-identities",
+        "subtopicSlug": "pythagorean-identities",
+        "questionText": "If $\\sec \\theta + \\tan \\theta = p$, what is the value of $\\sin \\theta$ in terms of $p$?\n(a) $\\frac{p^2 - 1}{p^2 + 1}$\n(b) $\\frac{p^2 + 1}{p^2 - 1}$\n(c) $\\frac{2p}{p^2 + 1}$\n(d) $\\frac{p^2 - 1}{2p}$",
+        "difficulty": "MEDIUM",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "\\frac{p^2 - 1}{p^2 + 1}",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "\\frac{p^2 + 1}{p^2 - 1}",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "\\frac{2p}{p^2 + 1}",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "\\frac{p^2 - 1}{2p}",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Since $\\sec^2 \\theta - \\tan^2 \\theta = 1$, we have $(\\sec \\theta - \\tan \\theta) = \\frac{1}{p}$.\nAdding: $2 \\sec \\theta = p + \\frac{1}{p} = \\frac{p^2 + 1}{p} \\implies \\sec \\theta = \\frac{p^2 + 1}{2p}$.\nSubtracting: $2 \\tan \\theta = p - \\frac{1}{p} = \\frac{p^2 - 1}{p} \\implies \\tan \\theta = \\frac{p^2 - 1}{2p}$.\nThen $\\sin \\theta = \\frac{\\tan \\theta}{\\sec \\theta} = \\frac{p^2 - 1}{p^2 + 1}$.",
+        "keyConcept": "Reciprocal identity pairs in secant and tangent relations"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "algebra",
+        "topicSlug": "algebraic-identities",
+        "subtopicSlug": "cubic-identities",
+        "questionText": "If $x + \\frac{1}{x} = 3$, what is the numerical value of $x^3 + \\frac{1}{x^3}$?\n(a) 18\n(b) 27\n(c) 24\n(d) 36",
+        "difficulty": "EASY",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "18",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "27",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "24",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "36",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Using the algebraic identity $x^3 + \\frac{1}{x^3} = (x + \\frac{1}{x})^3 - 3(x + \\frac{1}{x}) = 3^3 - 3(3) = 27 - 9 = 18$.",
+        "keyConcept": "Cubic expansion identity for reciprocal sum functions"
+      },
+      {
+        "questionNumber": 4,
+        "chapterSlug": "geometry",
+        "topicSlug": "circles-tangents",
+        "subtopicSlug": "tangent-secant-theorems",
+        "questionText": "From an external point $P$, a tangent $PT$ and a secant $PAB$ intersecting the circle at $A$ and $B$ are drawn. If $PA = 4\\text{ cm}$ and $AB = 5\\text{ cm}$, find the length of tangent $PT$.\n(a) $6\\text{ cm}$\n(b) $5\\text{ cm}$\n(c) $4.5\\text{ cm}$\n(d) $7\\text{ cm}$",
+        "difficulty": "MEDIUM",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "6 cm",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "5 cm",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "4.5 cm",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "7 cm",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "By the Tangent-Secant Theorem, $PT^2 = PA \\times PB$. Here $PB = PA + AB = 4 + 5 = 9\\text{ cm}$. Therefore, $PT^2 = 4 \\times 9 = 36 \\implies PT = 6\\text{ cm}$.",
+        "keyConcept": "Tangent-Secant Power of a Point theorem in circle geometry"
+      },
+      {
+        "questionNumber": 5,
+        "chapterSlug": "mensuration",
+        "topicSlug": "areas-and-volumes",
+        "subtopicSlug": "melting-recasting-solids",
+        "questionText": "A solid metallic sphere of radius $6\\text{ cm}$ is melted and recast into small solid spheres of radius $2\\text{ cm}$ each. How many such small spheres are formed?\n(a) 27\n(b) 18\n(c) 9\n(d) 36",
+        "difficulty": "EASY",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "27",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "18",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "9",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "36",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Number of spheres $N = \\frac{\\text{Volume of large sphere}}{\\text{Volume of small sphere}} = \\frac{\\frac{4}{3}\\pi R^3}{\\frac{4}{3}\\pi r^3} = (\\frac{R}{r})^3 = (\\frac{6}{2})^3 = 3^3 = 27$.",
+        "keyConcept": "Volume conservation in melting and recasting of geometric solids"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2024,
+      "session": "I",
+      "exam": "CDS",
+      "subjectSlug": "elementary-maths",
+      "title": "UPSC CDS I (2024) — Elementary Mathematics Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "arithmetic",
+        "topicSlug": "time-speed-distance",
+        "subtopicSlug": "trains-relative-speed",
+        "questionText": "A train $180\\text{ m}$ long passes a telegraph pole in $9\\text{ seconds}$. How long will it take to pass a platform $360\\text{ m}$ long at the same speed?\n(a) $18\\text{ seconds}$\n(b) $27\\text{ seconds}$\n(c) $30\\text{ seconds}$\n(d) $36\\text{ seconds}$",
+        "difficulty": "EASY",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "18 seconds",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "27 seconds",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "30 seconds",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "36 seconds",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Speed of train $v = \\frac{180}{9} = 20\\text{ m/s}$. To cross a $360\\text{ m}$ platform, total distance $D = 180 + 360 = 540\\text{ m}$. Time $t = \\frac{540}{20} = 27\\text{ seconds}$.",
+        "keyConcept": "Distance summation principle in relative motion of trains and platforms"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "trigonometry",
+        "topicSlug": "heights-and-distances",
+        "subtopicSlug": "angles-elevation-depression",
+        "questionText": "The angle of elevation of the top of a tower from a point on the ground $30\\text{ m}$ away from its base is $30^\\circ$. What is the height of the tower?\n(a) $10\\sqrt{3}\\text{ m}$\n(b) $15\\text{ m}$\n(c) $30\\sqrt{3}\\text{ m}$\n(d) $20\\text{ m}$",
+        "difficulty": "EASY",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "10\\sqrt{3} m",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "15 m",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "30\\sqrt{3} m",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "20 m",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Let height be $h$. In right triangle, $\\tan(30^\\circ) = \\frac{h}{30} \\implies \\frac{1}{\\sqrt{3}} = \\frac{h}{30} \\implies h = \\frac{30}{\\sqrt{3}} = 10\\sqrt{3}\\text{ m}$.",
+        "keyConcept": "Trigonometric ratios in vertical heights and horizontal ground baselines"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "statistics",
+        "topicSlug": "central-tendency-dispersion",
+        "subtopicSlug": "mean-median-mode-relation",
+        "questionText": "For a moderately skewed frequency distribution, the empirical relationship between Mean, Median, and Mode is given by:\n(a) $\\text{Mode} = 3\\,\\text{Median} - 2\\,\\text{Mean}$\n(b) $\\text{Mode} = 2\\,\\text{Median} - 3\\,\\text{Mean}$\n(c) $\\text{Mean} = 3\\,\\text{Median} - 2\\,\\text{Mode}$\n(d) $\\text{Median} = 3\\,\\text{Mode} - 2\\,\\text{Mean}$",
+        "difficulty": "MEDIUM",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Mode = 3 Median - 2 Mean",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Mode = 2 Median - 3 Mean",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Mean = 3 Median - 2 Mode",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Median = 3 Mode - 2 Mean",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Karl Pearson's empirical relationship for unimodal, moderately skewed continuous distributions states that $\\text{Mean} - \\text{Mode} \\approx 3(\\text{Mean} - \\text{Median})$, which rearranges to $\\text{Mode} = 3\\,\\text{Median} - 2\\,\\text{Mean}$.",
+        "keyConcept": "Pearson empirical relationship among measures of central tendency"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2023,
+      "session": "II",
+      "exam": "CDS",
+      "subjectSlug": "english",
+      "title": "UPSC CDS II (2023) — English Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "spotting-errors",
+        "topicSlug": "subject-verb-agreement",
+        "subtopicSlug": "collective-nouns",
+        "questionText": "The board of naval inquiry (A) / have declared that the vessel (B) / was sea-worthy before deployment (C) / No error (D)",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "The board of naval inquiry",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "have declared that the vessel",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "was sea-worthy before deployment",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "No error",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Collective nouns acting as a unified entity take a singular verb. 'The board' acts as a single body, so 'have declared' must be replaced with 'has declared'.",
+        "keyConcept": "Singular verb concord with unified collective nouns"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "vocabulary-usage",
+        "topicSlug": "synonyms-antonyms",
+        "subtopicSlug": "contextual-synonyms",
+        "questionText": "Select the synonym for the capitalized word:\nThe intelligence officer noted the SURREPTITIOUS movement of armed personnel across the border.",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Clandestine",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Overt",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Casual",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Lugubrious",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "'Surreptitious' means kept secret, stealthy, or clandestine, especially because it would not be approved of. Synonym: 'Clandestine'.",
+        "keyConcept": "Stealth and reconnaissance vocabulary in CDS English"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "reading-comprehension",
+        "topicSlug": "passage-inference",
+        "subtopicSlug": "main-idea",
+        "questionText": "Read the passage fragment:\n'Strategic deterrence relies fundamentally on credible capability and unmistakable resolve. When an adversary perceives that aggression will incur unacceptable penalties, peace is preserved without firing a round.'\nWhat is the central theme articulated by the author?",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Deterrence succeeds through visible capability and demonstrated national resolve",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "Military spending should be drastically lowered during peacetime",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Aggression is inevitably caused by economic sanctions",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "All diplomatic treaties are ineffective without immediate armed conflict",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The text directly states deterrence relies on credible capability and unmistakable resolve to prevent aggression by ensuring penalties are unacceptable.",
+        "keyConcept": "Deduction of central thesis in military strategic discourse"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2023,
+      "session": "II",
+      "exam": "CDS",
+      "subjectSlug": "gk",
+      "title": "UPSC CDS II (2023) — General Knowledge Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "indian-polity",
+        "topicSlug": "parliament-union-executive",
+        "subtopicSlug": "parliamentary-bills",
+        "questionText": "Under Article 368 of the Constitution of India, a Bill to amend the Constitution can be introduced in:\n(a) Lok Sabha only\n(b) Rajya Sabha only\n(c) Either House of Parliament\n(d) Either House of Parliament or any State Legislative Assembly",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Lok Sabha only",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Rajya Sabha only",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "Either House of Parliament",
+            "isCorrect": true
+          },
+          {
+            "identifier": "D",
+            "optionText": "Either House of Parliament or any State Legislative Assembly",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Article 368(2) states that an amendment of the Constitution may be initiated only by the introduction of a Bill for the purpose in either House of Parliament.",
+        "keyConcept": "Constitutional Amendment procedure under Article 368"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "general-science-defence",
+        "topicSlug": "biology-physiology-ecology",
+        "subtopicSlug": "cell-organelles",
+        "questionText": "Which cell organelle is known as the 'suicide bag' of the cell because of its hydrolytic digestive enzymes?\n(a) Mitochondria\n(b) Lysosome\n(c) Ribosome\n(d) Centrosome",
+        "difficulty": "EASY",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Mitochondria",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Lysosome",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "Ribosome",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Centrosome",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Lysosomes contain acid hydrolases capable of digesting cellular macromolecules. During autolysis or cell damage, lysosomes rupture and digest their own cell, hence called suicide bags.",
+        "keyConcept": "Cellular organelles and enzymatic functions in eukaryotic cells"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "geography",
+        "topicSlug": "physical-geography",
+        "subtopicSlug": "climatology-cyclones",
+        "questionText": "Tropical cyclones do not form over the equatorial belt between 0° and 5° latitudes primarily because:\n(a) Sea surface temperatures are too cold\n(b) The Coriolis force is negligible or zero\n(c) Relative humidity is deficient\n(d) High vertical wind shear prevails",
+        "difficulty": "MEDIUM",
+        "marks": 0.83,
+        "negativeMarks": 0.28,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Sea surface temperatures are too cold",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "The Coriolis force is negligible or zero",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "Relative humidity is deficient",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "High vertical wind shear prevails",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The Coriolis parameter $f = 2\\Omega \\sin\\phi$ approaches zero near the equator ($\\phi = 0^\\circ$). Without adequate Coriolis deflecting force, incoming winds blow straight into the low pressure rather than rotating cyclonically.",
+        "keyConcept": "Coriolis acceleration and dynamical genesis of tropical cyclones"
+      }
+    ]
+  },
+  {
+    "paper": {
+      "year": 2023,
+      "session": "II",
+      "exam": "CDS",
+      "subjectSlug": "elementary-maths",
+      "title": "UPSC CDS II (2023) — Elementary Mathematics Official Paper",
+      "totalMarks": 100.0,
+      "durationMin": 120,
+      "isPublished": true,
+      "source": "Union Public Service Commission (UPSC) Official CDS Examination Paper",
+      "sourceUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "licenseType": "PUBLIC_DOMAIN_GOVERNMENT_DOCUMENTS",
+      "attribution": "Government of India / Union Public Service Commission. Public examination question paper reproduced under Section 52(1)(q) of the Indian Copyright Act for educational non-commercial candidate preparation."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "chapterSlug": "arithmetic",
+        "topicSlug": "percentages-profit-loss",
+        "subtopicSlug": "successive-discounts",
+        "questionText": "An article with marked price Rs. 2,000 is sold after two successive discounts of 20% and 10%. What is the net selling price?\n(a) Rs. 1,400\n(b) Rs. 1,440\n(c) Rs. 1,500\n(d) Rs. 1,360",
+        "difficulty": "EASY",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "Rs. 1,400",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "Rs. 1,440",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "Rs. 1,500",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "Rs. 1,360",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Net equivalent discount: $D_{eq} = 20 + 10 - \\frac{20 \\times 10}{100} = 28\\%$. Selling price: $2000 \\times (1 - 0.28) = 2000 \\times 0.72 = 1440$ rupees.",
+        "keyConcept": "Successive percentage discounting formula in commercial arithmetic"
+      },
+      {
+        "questionNumber": 2,
+        "chapterSlug": "geometry",
+        "topicSlug": "lines-angles-triangles",
+        "subtopicSlug": "congruence-similarity",
+        "questionText": "In a $\\triangle ABC$, the internal bisector of $\\angle A$ meets $BC$ at $D$. If $AB = 6\\text{ cm}$, $AC = 8\\text{ cm}$ and $BD = 3\\text{ cm}$, find the length of $DC$.\n(a) $3\\text{ cm}$\n(b) $4\\text{ cm}$\n(c) $4.5\\text{ cm}$\n(d) $5\\text{ cm}$",
+        "difficulty": "EASY",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "3 cm",
+            "isCorrect": false
+          },
+          {
+            "identifier": "B",
+            "optionText": "4 cm",
+            "isCorrect": true
+          },
+          {
+            "identifier": "C",
+            "optionText": "4.5 cm",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "5 cm",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "By the Angle Bisector Theorem, $\\frac{BD}{DC} = \\frac{AB}{AC} \\implies \\frac{3}{DC} = \\frac{6}{8} = \\frac{3}{4} \\implies DC = 4\\text{ cm}$.",
+        "keyConcept": "Internal Angle Bisector Theorem in Euclidean plane triangles"
+      },
+      {
+        "questionNumber": 3,
+        "chapterSlug": "algebra",
+        "topicSlug": "quadratic-equations",
+        "subtopicSlug": "nature-of-roots",
+        "questionText": "For what value of $k$ does the quadratic equation $x^2 - 2(k - 1)x + (k + 5) = 0$ have real and equal roots?\n(a) $4$ and $-1$\n(b) $3$ and $-2$\n(c) $5$ and $-1$\n(d) $2$ and $-3$",
+        "difficulty": "MEDIUM",
+        "marks": 1.0,
+        "negativeMarks": 0.33,
+        "questionType": "MCQ_SINGLE",
+        "options": [
+          {
+            "identifier": "A",
+            "optionText": "4 and -1",
+            "isCorrect": true
+          },
+          {
+            "identifier": "B",
+            "optionText": "3 and -2",
+            "isCorrect": false
+          },
+          {
+            "identifier": "C",
+            "optionText": "5 and -1",
+            "isCorrect": false
+          },
+          {
+            "identifier": "D",
+            "optionText": "2 and -3",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "For equal roots, discriminant $D = b^2 - 4ac = 0$.\n$[2(k - 1)]^2 - 4(1)(k + 5) = 0 \\implies 4(k^2 - 2k + 1) - 4(k + 5) = 0$.\nDividing by 4: $k^2 - 3k - 4 = 0 \\implies (k - 4)(k + 1) = 0 \\implies k = 4$ or $k = -1$.",
+        "keyConcept": "Zero discriminant condition for identical real roots of quadratic polynomials"
       }
     ]
   }
